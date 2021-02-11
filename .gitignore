@@ -1,4 +1,5 @@
 .idea\
+.idea\**
 logs\
 NotEx.iml
 target\
