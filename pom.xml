@@ -6,11 +6,19 @@
 
     <groupId>com.apploidxxx</groupId>
     <artifactId>notex</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-ALPHA</version>
     <url>https://github.com/AppLoidx/notex</url>
     <description>
         Say "no" to exceptions
     </description>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>NotEx</name>
+            <url>https://maven.pkg.github.com/AppLoidx/NotEx</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
