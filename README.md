@@ -1,4 +1,5 @@
 # NotEx (in development)
+
 ![](assets/Not_Ex-Logo.jpg)
 
 Say "no" to exceptions
@@ -41,8 +42,12 @@ private <S> Result<Boolean, S> assertTrue(Boolean bool) {
 }
 ````
 
+## Documentation
+* [Project home page (current)](http://apploidx.github.io/NotEx/)
+* [Project](http://apploidx.github.io/NotEx/docs/)
+* [JavaDoc](http://apploidx.github.io/NotEx/docs/apidocs/com/apploidxxx/notex/package-summary.html)
 
 ## References
 
 * Martin Fowler, [Replacing Throwing Exceptions with Notification in Validations](https://martinfowler.com/articles/replaceThrowWithNotification.html)
-    * If you're validating some data, you usually shouldn't be using exceptions to signal validation failures. Here I describe how I'd refactor such code into using the Notification pattern.
+  * If you're validating some data, you usually shouldn't be using exceptions to signal validation failures. Here I describe how I'd refactor such code into using the Notification pattern.
