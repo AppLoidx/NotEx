@@ -4,6 +4,15 @@
 
 Say "no" to exceptions
 
+## Dependency
+
+```xml
+<dependency>
+  <groupId>com.apploidxxx</groupId>
+  <artifactId>notex</artifactId>
+  <version>0.0.1-ALPHA</version>
+</dependency>
+```
 
 ## Basic example
 
