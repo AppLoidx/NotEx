@@ -1,5 +1,10 @@
 # NotEx (in development)
 
+![](https://img.shields.io/badge/PMD-3.13.0-GREEN?style=for-the-badge)
+![](https://img.shields.io/badge/Java-8-2787F5?style=for-the-badge)
+![](https://img.shields.io/badge/version-0.0.1-19191A?style=for-the-badge)
+<hr>
+
 ![](assets/Not_Ex-Logo.jpg)
 
 Say "no" to exceptions
