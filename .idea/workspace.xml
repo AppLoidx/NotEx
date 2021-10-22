@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="update readme">
-      <change afterPath="$PROJECT_DIR$/.idea/ClojureProjectResolveSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notex.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/HaltException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/ResultWrappers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_02_2021_22_46_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_02_2021_22_46__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" afterDir="false" />
+    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="fix comment">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +37,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
@@ -167,6 +153,7 @@
       <workItem from="1634114263625" duration="1226000" />
       <workItem from="1634414136402" duration="20000" />
       <workItem from="1634820843101" duration="6195000" />
+      <workItem from="1634900101460" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1613069596021</created>
@@ -217,7 +204,42 @@
       <option name="project" value="LOCAL" />
       <updated>1613078296351</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=".idea config">
+      <created>1634900143828</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634900143828</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add jmh for performance check">
+      <created>1634900203597</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1634900203597</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add stream wrapper">
+      <created>1634900236671</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1634900236671</updated>
+    </task>
+    <task id="LOCAL-00011" summary="experiment with streams">
+      <created>1634900247416</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1634900247416</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix comment">
+      <created>1634900399768</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1634900399768</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +265,11 @@
     <MESSAGE value="idea config" />
     <MESSAGE value="add java test version" />
     <MESSAGE value="update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
+    <MESSAGE value=".idea config" />
+    <MESSAGE value="add jmh for performance check" />
+    <MESSAGE value="add stream wrapper" />
+    <MESSAGE value="experiment with streams" />
+    <MESSAGE value="fix comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix comment" />
   </component>
 </project>
