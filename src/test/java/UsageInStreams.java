@@ -25,6 +25,7 @@ public class UsageInStreams {
 
     @Test
     public void withNotEx() {
+
         // skip invalid values
         List<Integer> list = stream.map(this::doSomethingWithNotEx)
                 .filter(res -> res.getNotification().isEmpty())
@@ -39,7 +40,7 @@ public class UsageInStreams {
     public void withNotExReplaceValues() {
         // replace invalid values
         List<Integer> list = stream.map(this::doSomethingWithNotEx)
-                .map(r -> r.resolve(val -> val, notification -> 0))
+                .map(r -> r.resolve(notification -> 0))
                 .collect(Collectors.toList());
 
 
