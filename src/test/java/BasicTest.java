@@ -16,8 +16,8 @@ public class BasicTest {
     public void basicResultUsage() {
         Boolean resolve = Result.of("Hey!!")
                 .resolveFrom(String::length)
-                .resolve(this::assertOdd)
-                .resolve(this::assertTrue)
+                .apply(this::assertOdd)
+                .apply(this::assertTrue)
                 .resolve(val -> val, notification -> {
                     log.info(notification.getMessage());
                     return false;
