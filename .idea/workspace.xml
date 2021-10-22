@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="add idea files">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="update readme">
+      <change afterPath="$PROJECT_DIR$/.idea/ClojureProjectResolveSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notex.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/HaltException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/ResultWrappers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_02_2021_22_46_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_02_2021_22_46__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +50,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -50,51 +68,87 @@
       <recent name="D:\java\NotEx\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in notex">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+  <component name="RunManager" selected="JUnit.UsageInStreams.withNotExHalt">
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UsageInStreams.standard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notex" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
+      <option name="METHOD_NAME" value="standard" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in notex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsageInStreams.withNotEx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
+      <option name="METHOD_NAME" value="withNotEx" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsageInStreams.withNotExHalt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BasicTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
+      <option name="METHOD_NAME" value="withNotExHalt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsageInStreams.withNotExReplaceValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notex" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
+      <option name="METHOD_NAME" value="withNotExReplaceValues" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsageInStreams.withoutNotEx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notex" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
+      <option name="METHOD_NAME" value="withoutNotEx" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in notex" />
-        <item itemvalue="JUnit.BasicTest" />
-        <item itemvalue="JUnit.All in notex" />
-        <item itemvalue="JUnit.BasicTest" />
-        <item itemvalue="JUnit.All in notex" />
+        <item itemvalue="JUnit.UsageInStreams.withNotExHalt" />
+        <item itemvalue="JUnit.UsageInStreams.withNotEx" />
+        <item itemvalue="JUnit.UsageInStreams.withNotExReplaceValues" />
+        <item itemvalue="JUnit.UsageInStreams.standard" />
+        <item itemvalue="JUnit.UsageInStreams.withoutNotEx" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +163,10 @@
       <workItem from="1610985342274" duration="2789000" />
       <workItem from="1613065313927" duration="2448000" />
       <workItem from="1613067796530" duration="2375000" />
+      <workItem from="1613144815024" duration="598000" />
+      <workItem from="1634114263625" duration="1226000" />
+      <workItem from="1634414136402" duration="20000" />
+      <workItem from="1634820843101" duration="6195000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1613069596021</created>
@@ -138,17 +196,53 @@
       <option name="project" value="LOCAL" />
       <updated>1613071758595</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="idea config">
+      <created>1613077512980</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613077512980</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add java test version">
+      <created>1613077995020</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613077995020</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update readme">
+      <created>1613078296351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613078296351</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore" />
     <MESSAGE value="remove sources from gh page" />
     <MESSAGE value="update" />
     <MESSAGE value="add idea files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add idea files" />
+    <MESSAGE value="idea config" />
+    <MESSAGE value="add java test version" />
+    <MESSAGE value="update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
   </component>
 </project>
