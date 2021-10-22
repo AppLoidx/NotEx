@@ -62,13 +62,25 @@ public class Result<T, S> {
     }
 
     /**
+     * It should be used in the end of the "notex" chain
+     *
+     * @param resolvable functional interface to manage the occurred notification
+     * @return final result
+     */
+    public T resolve(Resolvable<S, T> resolvable) {
+        return getNotification()
+                .map(resolvable::apply)
+                .orElse(this.object);
+    }
+
+    /**
      * It should be used in the middle of the "notex" chain
      *
      * @param function action that will be performed
      * @param <R> result type
      * @return intermediate result
      */
-    public <R> Result<R, S> resolve(Function<T, Result<R, S>> function) {
+    public <R> Result<R, S> apply(Function<T, Result<R, S>> function) {
         return getNotification().<Result<R, S>>map(Result::of)
                 .orElseGet(() -> function.apply(this.object));
     }
