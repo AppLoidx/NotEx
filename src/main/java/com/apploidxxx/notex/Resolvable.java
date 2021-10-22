@@ -14,7 +14,7 @@ public interface Resolvable<S, T> {
      *
      * @param notification from resolve (occurred error)
      * @return default (error, empty) value for next resolve statement
-     * @see Result#resolve(Function, Resolvable)
+     * @see Result#resolve(Resolvable)
      */
     T apply(Notification<S> notification);
 }
