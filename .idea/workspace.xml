@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="fix comment">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="add performance check">
+      <change afterPath="$PROJECT_DIR$/benchmark_notes/DepthStackCallPerformanceCheck.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benchmark_notes/HaltExceptionOnStreams.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jmh/DepthStackCallPerformanceCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionOnStreamsPerformanceCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionPerformanceCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/HaltException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/HaltException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/ResultWrappers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/ResultWrappers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +63,46 @@
       <recent name="D:\java\NotEx\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsageInStreams.withNotExHalt">
+  <component name="RunManager" selected="Application.DepthStackCallPerformanceCheck">
+    <configuration name="DepthStackCallPerformanceCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jmh.DepthStackCallPerformanceCheck" />
+      <module name="notex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jmh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HaltExceptionOnStreamsPerformanceCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jmh.HaltExceptionOnStreamsPerformanceCheck" />
+      <module name="notex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jmh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HaltExceptionPerformanceCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jmh.HaltExceptionPerformanceCheck" />
+      <module name="notex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jmh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="replType" value="NREPL" />
@@ -88,16 +136,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsageInStreams.withNotEx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="notex" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
-      <option name="METHOD_NAME" value="withNotEx" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UsageInStreams.withNotExHalt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
       <option name="PACKAGE_NAME" value="" />
@@ -108,33 +146,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsageInStreams.withNotExReplaceValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="notex" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
-      <option name="METHOD_NAME" value="withNotExReplaceValues" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsageInStreams.withoutNotEx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="notex" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
-      <option name="METHOD_NAME" value="withoutNotEx" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DepthStackCallPerformanceCheck" />
+        <item itemvalue="Application.HaltExceptionPerformanceCheck" />
+        <item itemvalue="Application.HaltExceptionOnStreamsPerformanceCheck" />
         <item itemvalue="JUnit.UsageInStreams.withNotExHalt" />
-        <item itemvalue="JUnit.UsageInStreams.withNotEx" />
-        <item itemvalue="JUnit.UsageInStreams.withNotExReplaceValues" />
         <item itemvalue="JUnit.UsageInStreams.standard" />
-        <item itemvalue="JUnit.UsageInStreams.withoutNotEx" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +171,12 @@
       <workItem from="1634114263625" duration="1226000" />
       <workItem from="1634414136402" duration="20000" />
       <workItem from="1634820843101" duration="6195000" />
-      <workItem from="1634900101460" duration="309000" />
+      <workItem from="1634900101460" duration="1410000" />
+      <workItem from="1634922327573" duration="5000" />
+      <workItem from="1634937845463" duration="2031000" />
+      <workItem from="1634994573014" duration="6122000" />
+      <workItem from="1635021189500" duration="7383000" />
+      <workItem from="1635086122908" duration="2685000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1613069596021</created>
@@ -239,7 +262,49 @@
       <option name="project" value="LOCAL" />
       <updated>1634900399768</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add gitignore">
+      <created>1634900419978</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1634900419978</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change signature and method name">
+      <created>1634941374547</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1634941374547</updated>
+    </task>
+    <task id="LOCAL-00015" summary="change javadoc">
+      <created>1634941382107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1634941382107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update example with new signature">
+      <created>1634941400540</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1634941400540</updated>
+    </task>
+    <task id="LOCAL-00017" summary="rename: resolve -&gt; apply">
+      <created>1634941418718</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1634941418718</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add performance check">
+      <created>1634941426084</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1634941426084</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +335,12 @@
     <MESSAGE value="add stream wrapper" />
     <MESSAGE value="experiment with streams" />
     <MESSAGE value="fix comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix comment" />
+    <MESSAGE value="add gitignore" />
+    <MESSAGE value="change signature and method name" />
+    <MESSAGE value="change javadoc" />
+    <MESSAGE value="update example with new signature" />
+    <MESSAGE value="rename: resolve -&gt; apply" />
+    <MESSAGE value="add performance check" />
+    <option name="LAST_COMMIT_MESSAGE" value="add performance check" />
   </component>
 </project>

@@ -1,0 +1,1216 @@
+C:\java\jdks\jdk-15.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin" -Dfile.encoding=UTF-8 -classpath D:\java\NotEx\target\test-classes;D:\java\NotEx\target\classes;C:\Users\apploid\.m2\repository\org\projectlombok\lombok\1.18.16\lombok-1.18.16.jar;C:\Users\apploid\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\apploid\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\apploid\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\apploid\.m2\repository\org\jetbrains\annotations\18.0.0\annotations-18.0.0.jar;C:\Users\apploid\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\apploid\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\apploid\.m2\repository\org\openjdk\jmh\jmh-core\1.32\jmh-core-1.32.jar;C:\Users\apploid\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;C:\Users\apploid\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\apploid\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.32\jmh-generator-annprocess-1.32.jar jmh.DepthStackCallPerformanceCheck
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchException
+# Parameters: (depth = 0)
+
+# Run progress: 0,00% complete, ETA 00:11:40
+# Fork: 1 of 5
+# Warmup Iteration   1: 1210,475 ns/op
+# Warmup Iteration   2: 1124,072 ns/op
+# Warmup Iteration   3: 1094,354 ns/op
+# Warmup Iteration   4: 1082,695 ns/op
+# Warmup Iteration   5: 1098,338 ns/op
+Iteration   1: 1054,588 ns/op
+Iteration   2: 1061,621 ns/op
+Iteration   3: 1060,726 ns/op
+Iteration   4: 1053,877 ns/op
+Iteration   5: 1038,703 ns/op
+
+# Run progress: 1,43% complete, ETA 00:12:32
+# Fork: 2 of 5
+# Warmup Iteration   1: 1167,469 ns/op
+# Warmup Iteration   2: 1085,476 ns/op
+# Warmup Iteration   3: 1085,627 ns/op
+# Warmup Iteration   4: 1086,412 ns/op
+# Warmup Iteration   5: 1065,956 ns/op
+Iteration   1: 1065,948 ns/op
+Iteration   2: 1064,839 ns/op
+Iteration   3: 1057,567 ns/op
+Iteration   4: 1055,111 ns/op
+Iteration   5: 1062,944 ns/op
+
+# Run progress: 2,86% complete, ETA 00:12:19
+# Fork: 3 of 5
+# Warmup Iteration   1: 1163,313 ns/op
+# Warmup Iteration   2: 1111,561 ns/op
+# Warmup Iteration   3: 1067,158 ns/op
+# Warmup Iteration   4: 1104,075 ns/op
+# Warmup Iteration   5: 1087,328 ns/op
+Iteration   1: 1063,311 ns/op
+Iteration   2: 1068,857 ns/op
+Iteration   3: 1046,044 ns/op
+Iteration   4: 1044,922 ns/op
+Iteration   5: 1048,276 ns/op
+
+# Run progress: 4,29% complete, ETA 00:12:06
+# Fork: 4 of 5
+# Warmup Iteration   1: 1194,578 ns/op
+# Warmup Iteration   2: 1086,305 ns/op
+# Warmup Iteration   3: 1086,766 ns/op
+# Warmup Iteration   4: 1090,691 ns/op
+# Warmup Iteration   5: 1104,096 ns/op
+Iteration   1: 1082,783 ns/op
+Iteration   2: 1078,609 ns/op
+Iteration   3: 1086,152 ns/op
+Iteration   4: 1042,112 ns/op
+Iteration   5: 1046,604 ns/op
+
+# Run progress: 5,71% complete, ETA 00:11:55
+# Fork: 5 of 5
+# Warmup Iteration   1: 1154,142 ns/op
+# Warmup Iteration   2: 1091,159 ns/op
+# Warmup Iteration   3: 1108,820 ns/op
+# Warmup Iteration   4: 1104,608 ns/op
+# Warmup Iteration   5: 1063,372 ns/op
+Iteration   1: 1079,224 ns/op
+Iteration   2: 1094,289 ns/op
+Iteration   3: 1075,616 ns/op
+Iteration   4: 1044,485 ns/op
+Iteration   5: 1047,519 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchException":
+  1060,989 ±(99.9%) 11,319 ns/op [Average]
+  (min, avg, max) = (1038,703, 1060,989, 1094,289), stdev = 15,110
+  CI (99.9%): [1049,670, 1072,308] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchException
+# Parameters: (depth = 5)
+
+# Run progress: 7,14% complete, ETA 00:11:44
+# Fork: 1 of 5
+# Warmup Iteration   1: 1572,625 ns/op
+# Warmup Iteration   2: 1526,545 ns/op
+# Warmup Iteration   3: 1516,144 ns/op
+# Warmup Iteration   4: 1499,797 ns/op
+# Warmup Iteration   5: 1513,920 ns/op
+Iteration   1: 1508,042 ns/op
+Iteration   2: 1512,864 ns/op
+Iteration   3: 1489,969 ns/op
+Iteration   4: 1480,897 ns/op
+Iteration   5: 1482,428 ns/op
+
+# Run progress: 8,57% complete, ETA 00:11:33
+# Fork: 2 of 5
+# Warmup Iteration   1: 1562,015 ns/op
+# Warmup Iteration   2: 1470,146 ns/op
+# Warmup Iteration   3: 1481,653 ns/op
+# Warmup Iteration   4: 1474,463 ns/op
+# Warmup Iteration   5: 1480,005 ns/op
+Iteration   1: 1502,365 ns/op
+Iteration   2: 1474,606 ns/op
+Iteration   3: 1475,323 ns/op
+Iteration   4: 1451,972 ns/op
+Iteration   5: 1459,354 ns/op
+
+# Run progress: 10,00% complete, ETA 00:11:22
+# Fork: 3 of 5
+# Warmup Iteration   1: 1615,768 ns/op
+# Warmup Iteration   2: 1520,007 ns/op
+# Warmup Iteration   3: 1503,241 ns/op
+# Warmup Iteration   4: 1522,426 ns/op
+# Warmup Iteration   5: 1533,464 ns/op
+Iteration   1: 1488,290 ns/op
+Iteration   2: 1513,667 ns/op
+Iteration   3: 1517,794 ns/op
+Iteration   4: 1463,746 ns/op
+Iteration   5: 1462,542 ns/op
+
+# Run progress: 11,43% complete, ETA 00:11:11
+# Fork: 4 of 5
+# Warmup Iteration   1: 1658,281 ns/op
+# Warmup Iteration   2: 1557,472 ns/op
+# Warmup Iteration   3: 1534,508 ns/op
+# Warmup Iteration   4: 1535,992 ns/op
+# Warmup Iteration   5: 1491,277 ns/op
+Iteration   1: 1556,746 ns/op
+Iteration   2: 1512,352 ns/op
+Iteration   3: 1497,032 ns/op
+Iteration   4: 1538,870 ns/op
+Iteration   5: 1543,584 ns/op
+
+# Run progress: 12,86% complete, ETA 00:11:00
+# Fork: 5 of 5
+# Warmup Iteration   1: 1605,917 ns/op
+# Warmup Iteration   2: 1558,014 ns/op
+# Warmup Iteration   3: 1542,125 ns/op
+# Warmup Iteration   4: 1521,148 ns/op
+# Warmup Iteration   5: 1534,700 ns/op
+Iteration   1: 1481,991 ns/op
+Iteration   2: 1503,832 ns/op
+Iteration   3: 1539,947 ns/op
+Iteration   4: 1453,334 ns/op
+Iteration   5: 1460,920 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchException":
+  1494,899 ±(99.9%) 22,348 ns/op [Average]
+  (min, avg, max) = (1451,972, 1494,899, 1556,746), stdev = 29,834
+  CI (99.9%): [1472,551, 1517,247] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchException
+# Parameters: (depth = 10)
+
+# Run progress: 14,29% complete, ETA 00:10:49
+# Fork: 1 of 5
+# Warmup Iteration   1: 2065,974 ns/op
+# Warmup Iteration   2: 2035,083 ns/op
+# Warmup Iteration   3: 1962,790 ns/op
+# Warmup Iteration   4: 1939,320 ns/op
+# Warmup Iteration   5: 1985,398 ns/op
+Iteration   1: 1979,241 ns/op
+Iteration   2: 1962,406 ns/op
+Iteration   3: 1963,503 ns/op
+Iteration   4: 1965,572 ns/op
+Iteration   5: 1947,947 ns/op
+
+# Run progress: 15,71% complete, ETA 00:10:38
+# Fork: 2 of 5
+# Warmup Iteration   1: 2166,761 ns/op
+# Warmup Iteration   2: 2021,722 ns/op
+# Warmup Iteration   3: 2024,613 ns/op
+# Warmup Iteration   4: 2060,100 ns/op
+# Warmup Iteration   5: 2074,159 ns/op
+Iteration   1: 1997,430 ns/op
+Iteration   2: 2032,299 ns/op
+Iteration   3: 1989,358 ns/op
+Iteration   4: 1968,388 ns/op
+Iteration   5: 1955,757 ns/op
+
+# Run progress: 17,14% complete, ETA 00:10:27
+# Fork: 3 of 5
+# Warmup Iteration   1: 2157,396 ns/op
+# Warmup Iteration   2: 2008,166 ns/op
+# Warmup Iteration   3: 2002,269 ns/op
+# Warmup Iteration   4: 1994,736 ns/op
+# Warmup Iteration   5: 2044,544 ns/op
+Iteration   1: 1982,501 ns/op
+Iteration   2: 1977,740 ns/op
+Iteration   3: 1980,331 ns/op
+Iteration   4: 1958,033 ns/op
+Iteration   5: 1949,650 ns/op
+
+# Run progress: 18,57% complete, ETA 00:10:17
+# Fork: 4 of 5
+# Warmup Iteration   1: 2121,310 ns/op
+# Warmup Iteration   2: 2011,807 ns/op
+# Warmup Iteration   3: 2027,641 ns/op
+# Warmup Iteration   4: 2022,468 ns/op
+# Warmup Iteration   5: 2035,383 ns/op
+Iteration   1: 2017,554 ns/op
+Iteration   2: 1997,783 ns/op
+Iteration   3: 1979,646 ns/op
+Iteration   4: 1973,655 ns/op
+Iteration   5: 1973,969 ns/op
+
+# Run progress: 20,00% complete, ETA 00:10:06
+# Fork: 5 of 5
+# Warmup Iteration   1: 2137,885 ns/op
+# Warmup Iteration   2: 2004,540 ns/op
+# Warmup Iteration   3: 1983,897 ns/op
+# Warmup Iteration   4: 2001,613 ns/op
+# Warmup Iteration   5: 2046,993 ns/op
+Iteration   1: 2020,160 ns/op
+Iteration   2: 1993,006 ns/op
+Iteration   3: 1980,122 ns/op
+Iteration   4: 1982,942 ns/op
+Iteration   5: 1972,329 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchException":
+  1980,053 ±(99.9%) 15,842 ns/op [Average]
+  (min, avg, max) = (1947,947, 1980,053, 2032,299), stdev = 21,149
+  CI (99.9%): [1964,211, 1995,895] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchException
+# Parameters: (depth = 20)
+
+# Run progress: 21,43% complete, ETA 00:09:55
+# Fork: 1 of 5
+# Warmup Iteration   1: 3390,185 ns/op
+# Warmup Iteration   2: 3211,614 ns/op
+# Warmup Iteration   3: 3154,617 ns/op
+# Warmup Iteration   4: 3180,981 ns/op
+# Warmup Iteration   5: 3166,928 ns/op
+Iteration   1: 3132,454 ns/op
+Iteration   2: 3123,567 ns/op
+Iteration   3: 3084,557 ns/op
+Iteration   4: 3035,452 ns/op
+Iteration   5: 3035,860 ns/op
+
+# Run progress: 22,86% complete, ETA 00:09:44
+# Fork: 2 of 5
+# Warmup Iteration   1: 3394,367 ns/op
+# Warmup Iteration   2: 3217,831 ns/op
+# Warmup Iteration   3: 3181,606 ns/op
+# Warmup Iteration   4: 3186,200 ns/op
+# Warmup Iteration   5: 3207,428 ns/op
+Iteration   1: 3215,874 ns/op
+Iteration   2: 3113,610 ns/op
+Iteration   3: 3172,147 ns/op
+Iteration   4: 3048,801 ns/op
+Iteration   5: 3047,254 ns/op
+
+# Run progress: 24,29% complete, ETA 00:09:33
+# Fork: 3 of 5
+# Warmup Iteration   1: 3335,890 ns/op
+# Warmup Iteration   2: 3096,675 ns/op
+# Warmup Iteration   3: 3143,229 ns/op
+# Warmup Iteration   4: 3088,865 ns/op
+# Warmup Iteration   5: 3075,282 ns/op
+Iteration   1: 3117,261 ns/op
+Iteration   2: 3089,055 ns/op
+Iteration   3: 3044,664 ns/op
+Iteration   4: 3019,741 ns/op
+Iteration   5: 3036,234 ns/op
+
+# Run progress: 25,71% complete, ETA 00:09:22
+# Fork: 4 of 5
+# Warmup Iteration   1: 3371,386 ns/op
+# Warmup Iteration   2: 3131,849 ns/op
+# Warmup Iteration   3: 3098,155 ns/op
+# Warmup Iteration   4: 3223,565 ns/op
+# Warmup Iteration   5: 3098,838 ns/op
+Iteration   1: 3107,775 ns/op
+Iteration   2: 3123,126 ns/op
+Iteration   3: 3092,828 ns/op
+Iteration   4: 3044,049 ns/op
+Iteration   5: 3049,733 ns/op
+
+# Run progress: 27,14% complete, ETA 00:09:12
+# Fork: 5 of 5
+# Warmup Iteration   1: 3394,356 ns/op
+# Warmup Iteration   2: 3235,428 ns/op
+# Warmup Iteration   3: 3167,898 ns/op
+# Warmup Iteration   4: 3186,393 ns/op
+# Warmup Iteration   5: 3323,636 ns/op
+Iteration   1: 3226,745 ns/op
+Iteration   2: 3173,566 ns/op
+Iteration   3: 3162,199 ns/op
+Iteration   4: 3214,575 ns/op
+Iteration   5: 3265,928 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchException":
+  3111,082 ±(99.9%) 52,430 ns/op [Average]
+  (min, avg, max) = (3019,741, 3111,082, 3265,928), stdev = 69,992
+  CI (99.9%): [3058,652, 3163,512] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchException
+# Parameters: (depth = 50)
+
+# Run progress: 28,57% complete, ETA 00:09:01
+# Fork: 1 of 5
+# Warmup Iteration   1: 6585,640 ns/op
+# Warmup Iteration   2: 6138,031 ns/op
+# Warmup Iteration   3: 6256,575 ns/op
+# Warmup Iteration   4: 5998,439 ns/op
+# Warmup Iteration   5: 5986,795 ns/op
+Iteration   1: 5984,174 ns/op
+Iteration   2: 5980,576 ns/op
+Iteration   3: 5872,753 ns/op
+Iteration   4: 5761,680 ns/op
+Iteration   5: 5790,926 ns/op
+
+# Run progress: 30,00% complete, ETA 00:08:50
+# Fork: 2 of 5
+# Warmup Iteration   1: 6471,335 ns/op
+# Warmup Iteration   2: 6006,328 ns/op
+# Warmup Iteration   3: 5913,185 ns/op
+# Warmup Iteration   4: 6013,923 ns/op
+# Warmup Iteration   5: 5938,658 ns/op
+Iteration   1: 5946,586 ns/op
+Iteration   2: 5863,841 ns/op
+Iteration   3: 6054,958 ns/op
+Iteration   4: 5775,738 ns/op
+Iteration   5: 5785,510 ns/op
+
+# Run progress: 31,43% complete, ETA 00:08:39
+# Fork: 3 of 5
+# Warmup Iteration   1: 6319,844 ns/op
+# Warmup Iteration   2: 6163,534 ns/op
+# Warmup Iteration   3: 5967,924 ns/op
+# Warmup Iteration   4: 5959,372 ns/op
+# Warmup Iteration   5: 5952,723 ns/op
+Iteration   1: 5884,069 ns/op
+Iteration   2: 5791,732 ns/op
+Iteration   3: 5703,156 ns/op
+Iteration   4: 5776,737 ns/op
+Iteration   5: 5713,514 ns/op
+
+# Run progress: 32,86% complete, ETA 00:08:28
+# Fork: 4 of 5
+# Warmup Iteration   1: 6287,842 ns/op
+# Warmup Iteration   2: 5919,168 ns/op
+# Warmup Iteration   3: 5969,259 ns/op
+# Warmup Iteration   4: 5978,731 ns/op
+# Warmup Iteration   5: 5955,982 ns/op
+Iteration   1: 5898,733 ns/op
+Iteration   2: 5983,291 ns/op
+Iteration   3: 5892,685 ns/op
+Iteration   4: 5849,326 ns/op
+Iteration   5: 5881,965 ns/op
+
+# Run progress: 34,29% complete, ETA 00:08:17
+# Fork: 5 of 5
+# Warmup Iteration   1: 6283,333 ns/op
+# Warmup Iteration   2: 6084,270 ns/op
+# Warmup Iteration   3: 6034,575 ns/op
+# Warmup Iteration   4: 6042,082 ns/op
+# Warmup Iteration   5: 6047,770 ns/op
+Iteration   1: 6089,265 ns/op
+Iteration   2: 5949,821 ns/op
+Iteration   3: 5889,315 ns/op
+Iteration   4: 5771,670 ns/op
+Iteration   5: 5836,569 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchException":
+  5869,144 ±(99.9%) 76,004 ns/op [Average]
+  (min, avg, max) = (5703,156, 5869,144, 6089,265), stdev = 101,463
+  CI (99.9%): [5793,140, 5945,148] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchException
+# Parameters: (depth = 100)
+
+# Run progress: 35,71% complete, ETA 00:08:07
+# Fork: 1 of 5
+# Warmup Iteration   1: 11785,788 ns/op
+# Warmup Iteration   2: 11220,580 ns/op
+# Warmup Iteration   3: 11193,748 ns/op
+# Warmup Iteration   4: 10968,772 ns/op
+# Warmup Iteration   5: 10877,499 ns/op
+Iteration   1: 11015,308 ns/op
+Iteration   2: 10966,829 ns/op
+Iteration   3: 10903,000 ns/op
+Iteration   4: 10847,951 ns/op
+Iteration   5: 10835,127 ns/op
+
+# Run progress: 37,14% complete, ETA 00:07:56
+# Fork: 2 of 5
+# Warmup Iteration   1: 11895,234 ns/op
+# Warmup Iteration   2: 10806,376 ns/op
+# Warmup Iteration   3: 10974,021 ns/op
+# Warmup Iteration   4: 10838,933 ns/op
+# Warmup Iteration   5: 10865,874 ns/op
+Iteration   1: 11006,774 ns/op
+Iteration   2: 10897,413 ns/op
+Iteration   3: 10763,934 ns/op
+Iteration   4: 10706,681 ns/op
+Iteration   5: 10781,155 ns/op
+
+# Run progress: 38,57% complete, ETA 00:07:45
+# Fork: 3 of 5
+# Warmup Iteration   1: 11790,543 ns/op
+# Warmup Iteration   2: 10786,606 ns/op
+# Warmup Iteration   3: 10946,856 ns/op
+# Warmup Iteration   4: 10968,516 ns/op
+# Warmup Iteration   5: 11291,526 ns/op
+Iteration   1: 10893,176 ns/op
+Iteration   2: 11255,631 ns/op
+Iteration   3: 10830,844 ns/op
+Iteration   4: 10686,529 ns/op
+Iteration   5: 10595,535 ns/op
+
+# Run progress: 40,00% complete, ETA 00:07:34
+# Fork: 4 of 5
+# Warmup Iteration   1: 11881,200 ns/op
+# Warmup Iteration   2: 11210,690 ns/op
+# Warmup Iteration   3: 10834,395 ns/op
+# Warmup Iteration   4: 10935,393 ns/op
+# Warmup Iteration   5: 11222,006 ns/op
+Iteration   1: 11037,356 ns/op
+Iteration   2: 11060,053 ns/op
+Iteration   3: 11205,409 ns/op
+Iteration   4: 10702,172 ns/op
+Iteration   5: 10638,462 ns/op
+
+# Run progress: 41,43% complete, ETA 00:07:23
+# Fork: 5 of 5
+# Warmup Iteration   1: 11766,343 ns/op
+# Warmup Iteration   2: 11209,740 ns/op
+# Warmup Iteration   3: 11312,593 ns/op
+# Warmup Iteration   4: 11236,584 ns/op
+# Warmup Iteration   5: 11027,449 ns/op
+Iteration   1: 11106,809 ns/op
+Iteration   2: 11165,688 ns/op
+Iteration   3: 10920,653 ns/op
+Iteration   4: 10670,724 ns/op
+Iteration   5: 10687,597 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchException":
+  10887,232 ±(99.9%) 139,166 ns/op [Average]
+  (min, avg, max) = (10595,535, 10887,232, 11255,631), stdev = 185,783
+  CI (99.9%): [10748,066, 11026,399] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchException
+# Parameters: (depth = 150)
+
+# Run progress: 42,86% complete, ETA 00:07:12
+# Fork: 1 of 5
+# Warmup Iteration   1: 16967,798 ns/op
+# Warmup Iteration   2: 16001,965 ns/op
+# Warmup Iteration   3: 15989,631 ns/op
+# Warmup Iteration   4: 15747,110 ns/op
+# Warmup Iteration   5: 15888,070 ns/op
+Iteration   1: 15898,357 ns/op
+Iteration   2: 15585,850 ns/op
+Iteration   3: 15733,873 ns/op
+Iteration   4: 15640,825 ns/op
+Iteration   5: 15624,361 ns/op
+
+# Run progress: 44,29% complete, ETA 00:07:02
+# Fork: 2 of 5
+# Warmup Iteration   1: 17006,399 ns/op
+# Warmup Iteration   2: 16220,443 ns/op
+# Warmup Iteration   3: 16155,338 ns/op
+# Warmup Iteration   4: 15974,789 ns/op
+# Warmup Iteration   5: 15648,739 ns/op
+Iteration   1: 15599,568 ns/op
+Iteration   2: 15506,872 ns/op
+Iteration   3: 15778,513 ns/op
+Iteration   4: 15323,234 ns/op
+Iteration   5: 15399,182 ns/op
+
+# Run progress: 45,71% complete, ETA 00:06:51
+# Fork: 3 of 5
+# Warmup Iteration   1: 16928,602 ns/op
+# Warmup Iteration   2: 16114,942 ns/op
+# Warmup Iteration   3: 16387,866 ns/op
+# Warmup Iteration   4: 16235,964 ns/op
+# Warmup Iteration   5: 16147,193 ns/op
+Iteration   1: 16423,934 ns/op
+Iteration   2: 16184,653 ns/op
+Iteration   3: 16141,253 ns/op
+Iteration   4: 15450,160 ns/op
+Iteration   5: 15405,838 ns/op
+
+# Run progress: 47,14% complete, ETA 00:06:40
+# Fork: 4 of 5
+# Warmup Iteration   1: 16641,103 ns/op
+# Warmup Iteration   2: 15658,949 ns/op
+# Warmup Iteration   3: 16068,861 ns/op
+# Warmup Iteration   4: 15931,913 ns/op
+# Warmup Iteration   5: 15937,682 ns/op
+Iteration   1: 15907,612 ns/op
+Iteration   2: 15811,170 ns/op
+Iteration   3: 15530,966 ns/op
+Iteration   4: 15458,914 ns/op
+Iteration   5: 15363,197 ns/op
+
+# Run progress: 48,57% complete, ETA 00:06:29
+# Fork: 5 of 5
+# Warmup Iteration   1: 16645,592 ns/op
+# Warmup Iteration   2: 15884,567 ns/op
+# Warmup Iteration   3: 15461,180 ns/op
+# Warmup Iteration   4: 15710,478 ns/op
+# Warmup Iteration   5: 15464,568 ns/op
+Iteration   1: 15261,787 ns/op
+Iteration   2: 15601,436 ns/op
+Iteration   3: 15570,251 ns/op
+Iteration   4: 15786,819 ns/op
+Iteration   5: 15632,449 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchException":
+  15664,843 ±(99.9%) 211,139 ns/op [Average]
+  (min, avg, max) = (15261,787, 15664,843, 16423,934), stdev = 281,864
+  CI (99.9%): [15453,704, 15875,982] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchNotEx
+# Parameters: (depth = 0)
+
+# Run progress: 50,00% complete, ETA 00:06:18
+# Fork: 1 of 5
+# Warmup Iteration   1: 4,735 ns/op
+# Warmup Iteration   2: 4,788 ns/op
+# Warmup Iteration   3: 3,905 ns/op
+# Warmup Iteration   4: 3,923 ns/op
+# Warmup Iteration   5: 3,886 ns/op
+Iteration   1: 3,930 ns/op
+Iteration   2: 3,912 ns/op
+Iteration   3: 3,931 ns/op
+Iteration   4: 3,980 ns/op
+Iteration   5: 3,964 ns/op
+
+# Run progress: 51,43% complete, ETA 00:06:07
+# Fork: 2 of 5
+# Warmup Iteration   1: 4,787 ns/op
+# Warmup Iteration   2: 4,733 ns/op
+# Warmup Iteration   3: 3,961 ns/op
+# Warmup Iteration   4: 3,961 ns/op
+# Warmup Iteration   5: 3,923 ns/op
+Iteration   1: 3,913 ns/op
+Iteration   2: 3,910 ns/op
+Iteration   3: 3,932 ns/op
+Iteration   4: 3,969 ns/op
+Iteration   5: 3,963 ns/op
+
+# Run progress: 52,86% complete, ETA 00:05:57
+# Fork: 3 of 5
+# Warmup Iteration   1: 4,748 ns/op
+# Warmup Iteration   2: 4,701 ns/op
+# Warmup Iteration   3: 3,936 ns/op
+# Warmup Iteration   4: 3,952 ns/op
+# Warmup Iteration   5: 3,953 ns/op
+Iteration   1: 3,908 ns/op
+Iteration   2: 3,931 ns/op
+Iteration   3: 3,924 ns/op
+Iteration   4: 3,966 ns/op
+Iteration   5: 3,959 ns/op
+
+# Run progress: 54,29% complete, ETA 00:05:46
+# Fork: 4 of 5
+# Warmup Iteration   1: 4,763 ns/op
+# Warmup Iteration   2: 4,778 ns/op
+# Warmup Iteration   3: 3,955 ns/op
+# Warmup Iteration   4: 4,052 ns/op
+# Warmup Iteration   5: 3,964 ns/op
+Iteration   1: 3,921 ns/op
+Iteration   2: 3,932 ns/op
+Iteration   3: 3,938 ns/op
+Iteration   4: 3,942 ns/op
+Iteration   5: 3,940 ns/op
+
+# Run progress: 55,71% complete, ETA 00:05:35
+# Fork: 5 of 5
+# Warmup Iteration   1: 4,744 ns/op
+# Warmup Iteration   2: 4,766 ns/op
+# Warmup Iteration   3: 3,938 ns/op
+# Warmup Iteration   4: 3,946 ns/op
+# Warmup Iteration   5: 3,944 ns/op
+Iteration   1: 3,941 ns/op
+Iteration   2: 3,954 ns/op
+Iteration   3: 3,930 ns/op
+Iteration   4: 3,952 ns/op
+Iteration   5: 3,969 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchNotEx":
+  3,940 ±(99.9%) 0,016 ns/op [Average]
+  (min, avg, max) = (3,908, 3,940, 3,980), stdev = 0,021
+  CI (99.9%): [3,925, 3,956] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchNotEx
+# Parameters: (depth = 5)
+
+# Run progress: 57,14% complete, ETA 00:05:24
+# Fork: 1 of 5
+# Warmup Iteration   1: 14,469 ns/op
+# Warmup Iteration   2: 13,065 ns/op
+# Warmup Iteration   3: 10,811 ns/op
+# Warmup Iteration   4: 10,805 ns/op
+# Warmup Iteration   5: 10,684 ns/op
+Iteration   1: 10,780 ns/op
+Iteration   2: 10,598 ns/op
+Iteration   3: 10,659 ns/op
+Iteration   4: 10,861 ns/op
+Iteration   5: 10,686 ns/op
+
+# Run progress: 58,57% complete, ETA 00:05:13
+# Fork: 2 of 5
+# Warmup Iteration   1: 13,603 ns/op
+# Warmup Iteration   2: 13,300 ns/op
+# Warmup Iteration   3: 10,883 ns/op
+# Warmup Iteration   4: 10,645 ns/op
+# Warmup Iteration   5: 10,654 ns/op
+Iteration   1: 10,448 ns/op
+Iteration   2: 10,517 ns/op
+Iteration   3: 10,488 ns/op
+Iteration   4: 10,530 ns/op
+Iteration   5: 10,658 ns/op
+
+# Run progress: 60,00% complete, ETA 00:05:03
+# Fork: 3 of 5
+# Warmup Iteration   1: 13,457 ns/op
+# Warmup Iteration   2: 12,897 ns/op
+# Warmup Iteration   3: 10,509 ns/op
+# Warmup Iteration   4: 10,563 ns/op
+# Warmup Iteration   5: 10,553 ns/op
+Iteration   1: 10,473 ns/op
+Iteration   2: 10,608 ns/op
+Iteration   3: 10,599 ns/op
+Iteration   4: 10,522 ns/op
+Iteration   5: 10,534 ns/op
+
+# Run progress: 61,43% complete, ETA 00:04:52
+# Fork: 4 of 5
+# Warmup Iteration   1: 14,380 ns/op
+# Warmup Iteration   2: 13,481 ns/op
+# Warmup Iteration   3: 10,849 ns/op
+# Warmup Iteration   4: 10,905 ns/op
+# Warmup Iteration   5: 10,826 ns/op
+Iteration   1: 10,597 ns/op
+Iteration   2: 10,528 ns/op
+Iteration   3: 10,577 ns/op
+Iteration   4: 10,581 ns/op
+Iteration   5: 10,570 ns/op
+
+# Run progress: 62,86% complete, ETA 00:04:41
+# Fork: 5 of 5
+# Warmup Iteration   1: 13,876 ns/op
+# Warmup Iteration   2: 13,321 ns/op
+# Warmup Iteration   3: 10,869 ns/op
+# Warmup Iteration   4: 10,734 ns/op
+# Warmup Iteration   5: 10,871 ns/op
+Iteration   1: 10,637 ns/op
+Iteration   2: 10,599 ns/op
+Iteration   3: 10,633 ns/op
+Iteration   4: 10,614 ns/op
+Iteration   5: 10,647 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchNotEx":
+  10,598 ±(99.9%) 0,068 ns/op [Average]
+  (min, avg, max) = (10,448, 10,598, 10,861), stdev = 0,091
+  CI (99.9%): [10,529, 10,666] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchNotEx
+# Parameters: (depth = 10)
+
+# Run progress: 64,29% complete, ETA 00:04:30
+# Fork: 1 of 5
+# Warmup Iteration   1: 17,190 ns/op
+# Warmup Iteration   2: 15,611 ns/op
+# Warmup Iteration   3: 13,410 ns/op
+# Warmup Iteration   4: 13,199 ns/op
+# Warmup Iteration   5: 13,344 ns/op
+Iteration   1: 13,356 ns/op
+Iteration   2: 13,245 ns/op
+Iteration   3: 13,309 ns/op
+Iteration   4: 13,450 ns/op
+Iteration   5: 13,299 ns/op
+
+# Run progress: 65,71% complete, ETA 00:04:19
+# Fork: 2 of 5
+# Warmup Iteration   1: 17,358 ns/op
+# Warmup Iteration   2: 15,914 ns/op
+# Warmup Iteration   3: 13,595 ns/op
+# Warmup Iteration   4: 13,646 ns/op
+# Warmup Iteration   5: 13,607 ns/op
+Iteration   1: 13,323 ns/op
+Iteration   2: 13,301 ns/op
+Iteration   3: 13,339 ns/op
+Iteration   4: 13,278 ns/op
+Iteration   5: 13,180 ns/op
+
+# Run progress: 67,14% complete, ETA 00:04:08
+# Fork: 3 of 5
+# Warmup Iteration   1: 16,940 ns/op
+# Warmup Iteration   2: 15,544 ns/op
+# Warmup Iteration   3: 13,383 ns/op
+# Warmup Iteration   4: 13,290 ns/op
+# Warmup Iteration   5: 13,299 ns/op
+Iteration   1: 13,172 ns/op
+Iteration   2: 13,154 ns/op
+Iteration   3: 13,129 ns/op
+Iteration   4: 13,195 ns/op
+Iteration   5: 13,363 ns/op
+
+# Run progress: 68,57% complete, ETA 00:03:58
+# Fork: 4 of 5
+# Warmup Iteration   1: 16,985 ns/op
+# Warmup Iteration   2: 15,618 ns/op
+# Warmup Iteration   3: 13,804 ns/op
+# Warmup Iteration   4: 13,618 ns/op
+# Warmup Iteration   5: 13,779 ns/op
+Iteration   1: 13,970 ns/op
+Iteration   2: 13,593 ns/op
+Iteration   3: 13,743 ns/op
+Iteration   4: 13,898 ns/op
+Iteration   5: 13,902 ns/op
+
+# Run progress: 70,00% complete, ETA 00:03:47
+# Fork: 5 of 5
+# Warmup Iteration   1: 16,997 ns/op
+# Warmup Iteration   2: 15,444 ns/op
+# Warmup Iteration   3: 13,211 ns/op
+# Warmup Iteration   4: 13,267 ns/op
+# Warmup Iteration   5: 13,604 ns/op
+Iteration   1: 13,275 ns/op
+Iteration   2: 13,211 ns/op
+Iteration   3: 13,222 ns/op
+Iteration   4: 13,136 ns/op
+Iteration   5: 13,277 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchNotEx":
+  13,373 ±(99.9%) 0,187 ns/op [Average]
+  (min, avg, max) = (13,129, 13,373, 13,970), stdev = 0,249
+  CI (99.9%): [13,186, 13,559] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchNotEx
+# Parameters: (depth = 20)
+
+# Run progress: 71,43% complete, ETA 00:03:36
+# Fork: 1 of 5
+# Warmup Iteration   1: 22,674 ns/op
+# Warmup Iteration   2: 21,336 ns/op
+# Warmup Iteration   3: 18,575 ns/op
+# Warmup Iteration   4: 18,403 ns/op
+# Warmup Iteration   5: 18,446 ns/op
+Iteration   1: 18,200 ns/op
+Iteration   2: 18,097 ns/op
+Iteration   3: 18,060 ns/op
+Iteration   4: 18,000 ns/op
+Iteration   5: 18,048 ns/op
+
+# Run progress: 72,86% complete, ETA 00:03:25
+# Fork: 2 of 5
+# Warmup Iteration   1: 22,404 ns/op
+# Warmup Iteration   2: 21,394 ns/op
+# Warmup Iteration   3: 18,576 ns/op
+# Warmup Iteration   4: 18,129 ns/op
+# Warmup Iteration   5: 18,466 ns/op
+Iteration   1: 18,072 ns/op
+Iteration   2: 18,164 ns/op
+Iteration   3: 18,305 ns/op
+Iteration   4: 18,406 ns/op
+Iteration   5: 18,417 ns/op
+
+# Run progress: 74,29% complete, ETA 00:03:14
+# Fork: 3 of 5
+# Warmup Iteration   1: 22,274 ns/op
+# Warmup Iteration   2: 21,211 ns/op
+# Warmup Iteration   3: 18,670 ns/op
+# Warmup Iteration   4: 18,536 ns/op
+# Warmup Iteration   5: 18,573 ns/op
+Iteration   1: 18,673 ns/op
+Iteration   2: 18,325 ns/op
+Iteration   3: 18,565 ns/op
+Iteration   4: 18,527 ns/op
+Iteration   5: 18,563 ns/op
+
+# Run progress: 75,71% complete, ETA 00:03:03
+# Fork: 4 of 5
+# Warmup Iteration   1: 22,129 ns/op
+# Warmup Iteration   2: 20,781 ns/op
+# Warmup Iteration   3: 18,059 ns/op
+# Warmup Iteration   4: 18,236 ns/op
+# Warmup Iteration   5: 18,184 ns/op
+Iteration   1: 18,116 ns/op
+Iteration   2: 18,115 ns/op
+Iteration   3: 18,158 ns/op
+Iteration   4: 18,069 ns/op
+Iteration   5: 18,663 ns/op
+
+# Run progress: 77,14% complete, ETA 00:02:52
+# Fork: 5 of 5
+# Warmup Iteration   1: 23,037 ns/op
+# Warmup Iteration   2: 21,275 ns/op
+# Warmup Iteration   3: 18,485 ns/op
+# Warmup Iteration   4: 18,667 ns/op
+# Warmup Iteration   5: 18,295 ns/op
+Iteration   1: 18,160 ns/op
+Iteration   2: 18,279 ns/op
+Iteration   3: 18,253 ns/op
+Iteration   4: 18,097 ns/op
+Iteration   5: 18,381 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchNotEx":
+  18,269 ±(99.9%) 0,153 ns/op [Average]
+  (min, avg, max) = (18,000, 18,269, 18,673), stdev = 0,205
+  CI (99.9%): [18,115, 18,422] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchNotEx
+# Parameters: (depth = 50)
+
+# Run progress: 78,57% complete, ETA 00:02:41
+# Fork: 1 of 5
+# Warmup Iteration   1: 42,311 ns/op
+# Warmup Iteration   2: 40,039 ns/op
+# Warmup Iteration   3: 37,568 ns/op
+# Warmup Iteration   4: 37,796 ns/op
+# Warmup Iteration   5: 37,319 ns/op
+Iteration   1: 37,039 ns/op
+Iteration   2: 37,171 ns/op
+Iteration   3: 37,361 ns/op
+Iteration   4: 37,645 ns/op
+Iteration   5: 37,505 ns/op
+
+# Run progress: 80,00% complete, ETA 00:02:30
+# Fork: 2 of 5
+# Warmup Iteration   1: 41,430 ns/op
+# Warmup Iteration   2: 39,648 ns/op
+# Warmup Iteration   3: 37,180 ns/op
+# Warmup Iteration   4: 37,538 ns/op
+# Warmup Iteration   5: 37,208 ns/op
+Iteration   1: 36,946 ns/op
+Iteration   2: 36,943 ns/op
+Iteration   3: 38,234 ns/op
+Iteration   4: 37,324 ns/op
+Iteration   5: 37,383 ns/op
+
+# Run progress: 81,43% complete, ETA 00:02:19
+# Fork: 3 of 5
+# Warmup Iteration   1: 41,212 ns/op
+# Warmup Iteration   2: 39,250 ns/op
+# Warmup Iteration   3: 37,182 ns/op
+# Warmup Iteration   4: 37,362 ns/op
+# Warmup Iteration   5: 37,012 ns/op
+Iteration   1: 36,966 ns/op
+Iteration   2: 37,009 ns/op
+Iteration   3: 36,855 ns/op
+Iteration   4: 37,319 ns/op
+Iteration   5: 37,398 ns/op
+
+# Run progress: 82,86% complete, ETA 00:02:09
+# Fork: 4 of 5
+# Warmup Iteration   1: 40,951 ns/op
+# Warmup Iteration   2: 39,737 ns/op
+# Warmup Iteration   3: 38,099 ns/op
+# Warmup Iteration   4: 37,773 ns/op
+# Warmup Iteration   5: 37,681 ns/op
+Iteration   1: 37,877 ns/op
+Iteration   2: 37,864 ns/op
+Iteration   3: 37,476 ns/op
+Iteration   4: 37,973 ns/op
+Iteration   5: 38,037 ns/op
+
+# Run progress: 84,29% complete, ETA 00:01:58
+# Fork: 5 of 5
+# Warmup Iteration   1: 41,142 ns/op
+# Warmup Iteration   2: 39,551 ns/op
+# Warmup Iteration   3: 37,526 ns/op
+# Warmup Iteration   4: 37,202 ns/op
+# Warmup Iteration   5: 37,098 ns/op
+Iteration   1: 36,929 ns/op
+Iteration   2: 36,840 ns/op
+Iteration   3: 37,128 ns/op
+Iteration   4: 37,387 ns/op
+Iteration   5: 37,276 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchNotEx":
+  37,355 ±(99.9%) 0,297 ns/op [Average]
+  (min, avg, max) = (36,840, 37,355, 38,234), stdev = 0,397
+  CI (99.9%): [37,058, 37,652] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchNotEx
+# Parameters: (depth = 100)
+
+# Run progress: 85,71% complete, ETA 00:01:47
+# Fork: 1 of 5
+# Warmup Iteration   1: 80,653 ns/op
+# Warmup Iteration   2: 76,419 ns/op
+# Warmup Iteration   3: 74,934 ns/op
+# Warmup Iteration   4: 74,236 ns/op
+# Warmup Iteration   5: 74,459 ns/op
+Iteration   1: 74,061 ns/op
+Iteration   2: 74,315 ns/op
+Iteration   3: 74,533 ns/op
+Iteration   4: 74,767 ns/op
+Iteration   5: 74,768 ns/op
+
+# Run progress: 87,14% complete, ETA 00:01:36
+# Fork: 2 of 5
+# Warmup Iteration   1: 80,667 ns/op
+# Warmup Iteration   2: 76,441 ns/op
+# Warmup Iteration   3: 74,198 ns/op
+# Warmup Iteration   4: 74,689 ns/op
+# Warmup Iteration   5: 74,143 ns/op
+Iteration   1: 73,968 ns/op
+Iteration   2: 76,197 ns/op
+Iteration   3: 74,327 ns/op
+Iteration   4: 74,653 ns/op
+Iteration   5: 74,854 ns/op
+
+# Run progress: 88,57% complete, ETA 00:01:25
+# Fork: 3 of 5
+# Warmup Iteration   1: 79,686 ns/op
+# Warmup Iteration   2: 77,239 ns/op
+# Warmup Iteration   3: 75,364 ns/op
+# Warmup Iteration   4: 74,797 ns/op
+# Warmup Iteration   5: 74,829 ns/op
+Iteration   1: 74,603 ns/op
+Iteration   2: 74,226 ns/op
+Iteration   3: 74,536 ns/op
+Iteration   4: 75,056 ns/op
+Iteration   5: 74,958 ns/op
+
+# Run progress: 90,00% complete, ETA 00:01:15
+# Fork: 4 of 5
+# Warmup Iteration   1: 80,412 ns/op
+# Warmup Iteration   2: 76,126 ns/op
+# Warmup Iteration   3: 75,353 ns/op
+# Warmup Iteration   4: 74,791 ns/op
+# Warmup Iteration   5: 74,220 ns/op
+Iteration   1: 74,575 ns/op
+Iteration   2: 74,547 ns/op
+Iteration   3: 74,589 ns/op
+Iteration   4: 74,642 ns/op
+Iteration   5: 74,738 ns/op
+
+# Run progress: 91,43% complete, ETA 00:01:04
+# Fork: 5 of 5
+# Warmup Iteration   1: 79,201 ns/op
+# Warmup Iteration   2: 77,053 ns/op
+# Warmup Iteration   3: 74,358 ns/op
+# Warmup Iteration   4: 74,728 ns/op
+# Warmup Iteration   5: 74,985 ns/op
+Iteration   1: 74,243 ns/op
+Iteration   2: 74,065 ns/op
+Iteration   3: 74,267 ns/op
+Iteration   4: 74,719 ns/op
+Iteration   5: 74,738 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchNotEx":
+  74,598 ±(99.9%) 0,327 ns/op [Average]
+  (min, avg, max) = (73,968, 74,598, 76,197), stdev = 0,437
+  CI (99.9%): [74,270, 74,925] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 15.0.1, OpenJDK 64-Bit Server VM, 15.0.1+9-18
+# VM invoker: C:\java\jdks\jdk-15.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=62968:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.DepthStackCallPerformanceCheck.benchNotEx
+# Parameters: (depth = 150)
+
+# Run progress: 92,86% complete, ETA 00:00:53
+# Fork: 1 of 5
+# Warmup Iteration   1: 118,374 ns/op
+# Warmup Iteration   2: 111,588 ns/op
+# Warmup Iteration   3: 108,278 ns/op
+# Warmup Iteration   4: 107,968 ns/op
+# Warmup Iteration   5: 108,836 ns/op
+Iteration   1: 107,915 ns/op
+Iteration   2: 107,317 ns/op
+Iteration   3: 107,085 ns/op
+Iteration   4: 107,443 ns/op
+Iteration   5: 107,313 ns/op
+
+# Run progress: 94,29% complete, ETA 00:00:42
+# Fork: 2 of 5
+# Warmup Iteration   1: 114,693 ns/op
+# Warmup Iteration   2: 110,542 ns/op
+# Warmup Iteration   3: 106,932 ns/op
+# Warmup Iteration   4: 109,918 ns/op
+# Warmup Iteration   5: 106,659 ns/op
+Iteration   1: 105,698 ns/op
+Iteration   2: 106,011 ns/op
+Iteration   3: 106,252 ns/op
+Iteration   4: 107,978 ns/op
+Iteration   5: 107,925 ns/op
+
+# Run progress: 95,71% complete, ETA 00:00:32
+# Fork: 3 of 5
+# Warmup Iteration   1: 113,361 ns/op
+# Warmup Iteration   2: 107,970 ns/op
+# Warmup Iteration   3: 105,557 ns/op
+# Warmup Iteration   4: 107,926 ns/op
+# Warmup Iteration   5: 105,288 ns/op
+Iteration   1: 105,329 ns/op
+Iteration   2: 105,801 ns/op
+Iteration   3: 107,119 ns/op
+Iteration   4: 106,291 ns/op
+Iteration   5: 106,970 ns/op
+
+# Run progress: 97,14% complete, ETA 00:00:21
+# Fork: 4 of 5
+# Warmup Iteration   1: 115,714 ns/op
+# Warmup Iteration   2: 111,617 ns/op
+# Warmup Iteration   3: 108,373 ns/op
+# Warmup Iteration   4: 107,533 ns/op
+# Warmup Iteration   5: 107,598 ns/op
+Iteration   1: 106,905 ns/op
+Iteration   2: 106,682 ns/op
+Iteration   3: 107,168 ns/op
+Iteration   4: 107,439 ns/op
+Iteration   5: 107,337 ns/op
+
+# Run progress: 98,57% complete, ETA 00:00:10
+# Fork: 5 of 5
+# Warmup Iteration   1: 113,805 ns/op
+# Warmup Iteration   2: 109,786 ns/op
+# Warmup Iteration   3: 106,033 ns/op
+# Warmup Iteration   4: 107,027 ns/op
+# Warmup Iteration   5: 106,943 ns/op
+Iteration   1: 105,543 ns/op
+Iteration   2: 106,122 ns/op
+Iteration   3: 106,289 ns/op
+Iteration   4: 106,179 ns/op
+Iteration   5: 106,301 ns/op
+
+
+Result "jmh.DepthStackCallPerformanceCheck.benchNotEx":
+  106,736 ±(99.9%) 0,578 ns/op [Average]
+  (min, avg, max) = (105,329, 106,736, 107,978), stdev = 0,772
+  CI (99.9%): [106,158, 107,315] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:12:28
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                      (depth)  Mode  Cnt      Score     Error  Units
+DepthStackCallPerformanceCheck.benchException        0  avgt   25   1060,989 ±  11,319  ns/op
+DepthStackCallPerformanceCheck.benchException        5  avgt   25   1494,899 ±  22,348  ns/op
+DepthStackCallPerformanceCheck.benchException       10  avgt   25   1980,053 ±  15,842  ns/op
+DepthStackCallPerformanceCheck.benchException       20  avgt   25   3111,082 ±  52,430  ns/op
+DepthStackCallPerformanceCheck.benchException       50  avgt   25   5869,144 ±  76,004  ns/op
+DepthStackCallPerformanceCheck.benchException      100  avgt   25  10887,232 ± 139,166  ns/op
+DepthStackCallPerformanceCheck.benchException      150  avgt   25  15664,843 ± 211,139  ns/op
+DepthStackCallPerformanceCheck.benchNotEx            0  avgt   25      3,940 ±   0,016  ns/op
+DepthStackCallPerformanceCheck.benchNotEx            5  avgt   25     10,598 ±   0,068  ns/op
+DepthStackCallPerformanceCheck.benchNotEx           10  avgt   25     13,373 ±   0,187  ns/op
+DepthStackCallPerformanceCheck.benchNotEx           20  avgt   25     18,269 ±   0,153  ns/op
+DepthStackCallPerformanceCheck.benchNotEx           50  avgt   25     37,355 ±   0,297  ns/op
+DepthStackCallPerformanceCheck.benchNotEx          100  avgt   25     74,598 ±   0,327  ns/op
+DepthStackCallPerformanceCheck.benchNotEx          150  avgt   25    106,736 ±   0,578  ns/op
+
+Process finished with exit code 0

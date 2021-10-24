@@ -14,7 +14,7 @@ public class BasicTest {
      */
     @Test
     public void basicResultUsage() {
-        Boolean resolve = Result.of("Hey!!")
+        Boolean value = Result.of("Hey!!")
                 .resolveFrom(String::length)
                 .apply(this::assertOdd)
                 .apply(this::assertTrue)
@@ -23,7 +23,7 @@ public class BasicTest {
                     return false;
                 });
 
-        log.info(resolve.toString());
+        log.info(value.toString());
     }
 
     private <T> Result<Boolean, T> assertOdd(int number) {

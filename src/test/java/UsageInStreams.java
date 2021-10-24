@@ -1,3 +1,4 @@
+import com.apploidxxx.notex.HaltException;
 import com.apploidxxx.notex.Notification;
 import com.apploidxxx.notex.Result;
 import com.apploidxxx.notex.ResultWrappers;
@@ -50,8 +51,9 @@ public class UsageInStreams {
     @Test
     public void withNotExHalt() {
         // halt with static exception
-        List<Integer> list = ResultWrappers.streamHaltIfError(
-                stream.map(this::doSomethingWithNotEx))
+        List<Integer> list =
+                ResultWrappers.streamHaltIfError(stream
+                        .map(this::doSomethingWithNotEx))
                 .collect(Collectors.toList()); // exception
         log.info(list.toString());
     }
