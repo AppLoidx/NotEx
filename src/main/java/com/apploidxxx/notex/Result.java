@@ -56,9 +56,11 @@ public class Result<T, S> {
      * @return final result
      */
     public <R> R resolve(Function<T, R> function, Resolvable<S, R> resolvable) {
-        return getNotification()
-                .map(resolvable::apply)
-                .orElseGet(() -> function.apply(this.object));
+        if (getNotification().isPresent() && getNotification().get().getErrorObject().isPresent()) {
+            return resolvable.apply(getNotification().get().getErrorObject().get());
+        } else {
+            return function.apply(object);
+        }
     }
 
     /**
@@ -68,9 +70,11 @@ public class Result<T, S> {
      * @return final result
      */
     public T resolve(Resolvable<S, T> resolvable) {
-        return getNotification()
-                .map(resolvable::apply)
-                .orElse(this.object);
+        if (getNotification().isPresent() && getNotification().get().getErrorObject().isPresent()) {
+            return resolvable.apply(getNotification().get().getErrorObject().get());
+        } else {
+            return object;
+        }
     }
 
     /**
