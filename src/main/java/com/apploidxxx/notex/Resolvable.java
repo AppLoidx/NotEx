@@ -10,11 +10,6 @@ import java.util.function.Function;
  */
 @FunctionalInterface
 public interface Resolvable<S, T> {
-    /**
-     *
-     * @param notification from resolve (occurred error)
-     * @return default (error, empty) value for next resolve statement
-     * @see Result#resolve(Resolvable)
-     */
-    T apply(Notification<S> notification);
+
+    T apply(S errorObject);
 }
