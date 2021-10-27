@@ -14,19 +14,19 @@ public class BasicTest {
      */
     @Test
     public void basicResultUsage() {
-        Boolean value = Result.of("Hey!!")
-                .resolveFrom(String::length)
-                .apply(this::assertOdd)
-                .apply(this::assertTrue)
-                .resolve(val -> val, notification -> {
-                    log.info(notification.getMessage());
-                    return false;
-                });
+        Boolean value = Result.<String, String>of("Hey1!!")
+            .resolveFrom(String::length)
+            .apply(this::assertOdd)
+            .apply(this::assertTrue)
+            .resolve(val -> val, errorObject -> {
+                log.info(errorObject);
+                return false;
+            });
 
         log.info(value.toString());
     }
 
-    private <T> Result<Boolean, T> assertOdd(int number) {
+    private Result<Boolean, String> assertOdd(int number) {
         if (number % 2 == 0) {
             return Result.of(Notification.of("Number is not odd at all!"));
         } else {
@@ -34,7 +34,7 @@ public class BasicTest {
         }
     }
 
-    private <S> Result<Boolean, S> assertTrue(Boolean bool) {
+    private Result<Boolean, String> assertTrue(Boolean bool) {
         if (bool) {
             return Result.of(true);
         } else {
