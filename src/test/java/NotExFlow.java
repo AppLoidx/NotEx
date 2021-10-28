@@ -7,7 +7,7 @@ public class NotExFlow {
     public void flow() {
         Integer number = 0;
 
-        String result = Result.<Integer, String>of(number)
+        String result = Result.<Integer, String>ok(number)
                 .apply(this::minusOne)
                 .apply(this::minusTwo)
                 .apply(this::minusThree)
@@ -20,25 +20,25 @@ public class NotExFlow {
 
     private Result<Integer, String> minusOne(Integer number) {
         if (number < 1) {
-            return Result.of(Notification.of("Negative error (1)"));
+            return Result.err(Notification.of("Negative error (1)"));
         } else {
-            return Result.of(number - 1);
+            return Result.ok(number - 1);
         }
     }
 
     private Result<Integer, String> minusTwo(Integer number) {
         if (number < 2) {
-            return Result.of(Notification.of("Negative error (2)"));
+            return Result.err(Notification.of("Negative error (2)"));
         } else {
-            return Result.of(number - 2);
+            return Result.ok(number - 2);
         }
     }
 
     private Result<Integer, String> minusThree(Integer number) {
         if (number < 3) {
-            return Result.of(Notification.of("Negative error (3)"));
+            return Result.err(Notification.of("Negative error (3)"));
         } else {
-            return Result.of(number - 3);
+            return Result.ok(number - 3);
         }
     }
 }

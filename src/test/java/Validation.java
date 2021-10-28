@@ -4,16 +4,13 @@ import com.apploidxxx.notex.ValidationError;
 import lombok.Getter;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Validation {
 
 
     @Test
     public void validation() {
         final UserFields userFields = new UserFields(1, -1, 1, -1);
-        validate(userFields)
+        boolean valid = validate(userFields)
                 .resolve(errorObject -> {
                     errorObject.onEachError((field, error) -> System.out.printf("Error on '%s' : %s%n", field, error));
                     return false;
@@ -42,7 +39,7 @@ public class Validation {
         if (errorObject.isHasError()) {
             return Result.of(false, Notification.of(errorObject));
         } else {
-            return Result.of(true);
+            return Result.ok(true);
         }
 
     }

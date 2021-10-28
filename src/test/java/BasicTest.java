@@ -14,7 +14,7 @@ public class BasicTest {
      */
     @Test
     public void basicResultUsage() {
-        Boolean value = Result.<String, String>of("Hey1!!")
+        Boolean value = Result.<String, String>ok("Hey1!!")
             .resolveFrom(String::length)
             .apply(this::assertOdd)
             .apply(this::assertTrue)
@@ -28,17 +28,17 @@ public class BasicTest {
 
     private Result<Boolean, String> assertOdd(int number) {
         if (number % 2 == 0) {
-            return Result.of(Notification.of("Number is not odd at all!"));
+            return Result.err(Notification.of("Number is not odd at all!"));
         } else {
-            return Result.of(true);
+            return Result.ok(true);
         }
     }
 
     private Result<Boolean, String> assertTrue(Boolean bool) {
         if (bool) {
-            return Result.of(true);
+            return Result.ok(true);
         } else {
-            return Result.of(Notification.of("This result contains error!"));
+            return Result.err(Notification.of("This result contains error!"));
 
         }
     }

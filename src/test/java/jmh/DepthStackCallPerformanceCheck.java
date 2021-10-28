@@ -55,7 +55,7 @@ public class DepthStackCallPerformanceCheck {
     }
     private Result<Integer, String> withNotEx(int depth) {
         if (depth == 0)
-            return Result.of(Notification.of("Arithmetic error"));
+            return Result.err(Notification.of("Arithmetic error"));
         else
             return withNotEx(depth - 1);
     }

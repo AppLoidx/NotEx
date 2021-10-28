@@ -35,7 +35,7 @@ public class BasicPerformanceCheck {
         throw new ArithmeticException();
     }
     private Result<Integer, String> withNotEx() {
-        return Result.of(Notification.of("Arithmetic error"));
+        return Result.err(Notification.of("Arithmetic error"));
     }
 
     private int valueIfExceptionOccurs() {

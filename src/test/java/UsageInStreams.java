@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 @Slf4j
 public class UsageInStreams {
 
-    private static final Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6);
+private static final Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6);
 
 
 
@@ -28,7 +28,7 @@ public class UsageInStreams {
 
         // skip invalid values
         List<Integer> list = stream.map(this::doSomethingWithNotEx)
-                .filter(res -> res.getNotification().isEmpty())
+                .filter(Result::isOk)
                 .map(Result::getObject)
                 .collect(Collectors.toList());
 
@@ -67,9 +67,9 @@ public class UsageInStreams {
 
     private Result<Integer, String> doSomethingWithNotEx(Integer number) {
         if (number % 3 == 0) {
-            return Result.of(Notification.of(String.format("number %d is dividable by 3", number)));
+            return Result.err(Notification.of(String.format("number %d is dividable by 3", number)));
         }
 
-        return Result.of(number);
+        return Result.ok(number);
     }
 }

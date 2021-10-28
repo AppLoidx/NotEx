@@ -56,11 +56,9 @@ public class Result<T, S> {
      * @return final result
      */
     public <R> R resolve(Function<T, R> function, Resolvable<S, R> resolvable) {
-        if (getNotification().isPresent() && getNotification().get().getErrorObject().isPresent()) {
-            return resolvable.apply(getNotification().get().getErrorObject().get());
-        } else {
-            return function.apply(object);
-        }
+        return errorObject()
+                .map(resolvable::apply)
+                .orElseGet(() -> function.apply(object));
     }
 
     /**
@@ -70,11 +68,13 @@ public class Result<T, S> {
      * @return final result
      */
     public T resolve(Resolvable<S, T> resolvable) {
-        if (getNotification().isPresent() && getNotification().get().getErrorObject().isPresent()) {
-            return resolvable.apply(getNotification().get().getErrorObject().get());
-        } else {
-            return object;
-        }
+        return errorObject()
+                .map(resolvable::apply)
+                .orElse(object);
+    }
+
+    private Optional<S> errorObject() {
+        return notification != null ? notification.getErrorObject() : Optional.empty();
     }
 
     /**
@@ -85,7 +85,7 @@ public class Result<T, S> {
      * @return intermediate result
      */
     public <R> Result<R, S> apply(Function<T, Result<R, S>> function) {
-        return getNotification().<Result<R, S>>map(Result::of)
+        return getNotification().<Result<R, S>>map(Result::err)
                 .orElseGet(() -> function.apply(this.object));
     }
 
@@ -96,8 +96,12 @@ public class Result<T, S> {
      * @return initial result for chain
      */
     public <R> Result<R, S> resolveFrom(Function<T, ? extends R> function) {
-        return getNotification().<Result<R, S>>map(Result::of)
-                .orElseGet(() -> Result.of(function.apply(this.object)));
+        return getNotification().<Result<R, S>>map(Result::err)
+                .orElseGet(() -> Result.ok(function.apply(this.object)));
+    }
+
+    public boolean isOk() {
+        return notification == null;
     }
 
     /**
@@ -109,7 +113,7 @@ public class Result<T, S> {
      * @return instance of {@link Result}
      * @see Result#of(Object, Notification)
      */
-    public static <T, S> Result<T, S> of(T object) {
+    public static <T, S> Result<T, S> ok(T object) {
         return new Result<>(object);
     }
 
@@ -133,7 +137,7 @@ public class Result<T, S> {
      * @param <S> notification error-object type
      * @return instance of {@link Result}
      */
-    public static <T, S> Result<T, S> of(Notification<S> notification) {
+    public static <T, S> Result<T, S> err(Notification<S> notification) {
         return new Result<>(null, notification);
     }
 

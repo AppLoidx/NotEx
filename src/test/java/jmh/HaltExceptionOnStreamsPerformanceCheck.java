@@ -3,7 +3,6 @@ package jmh;
 import com.apploidxxx.notex.Notification;
 import com.apploidxxx.notex.Result;
 import com.apploidxxx.notex.ResultWrappers;
-import lombok.extern.slf4j.Slf4j;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
@@ -37,11 +36,13 @@ public class HaltExceptionOnStreamsPerformanceCheck {
     @Param({"0", "5", "10", "20"})
     public int depth;
 
+    @CompilerControl(CompilerControl.Mode.INLINE)
     @Benchmark
     public List<Integer> std() {
         return stdExample(depth);
     }
 
+    @CompilerControl(CompilerControl.Mode.INLINE)
     @Benchmark
     public List<Integer> halt() {
         return haltExample(depth);
@@ -79,10 +80,10 @@ public class HaltExceptionOnStreamsPerformanceCheck {
 
     private Result<Integer, String> doSomethingWithNotEx(Integer number) {
         if (number % 3 == 0) {
-            return Result.of(Notification.of("number is dividable by 3"));
+            return Result.err(Notification.of("number is dividable by 3"));
         }
 
-        return Result.of(number + 1);
+        return Result.ok(number + 1);
     }
 
     private Integer doSomething(Integer number, int depth) {

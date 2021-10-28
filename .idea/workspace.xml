@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="add performance check">
-      <change afterPath="$PROJECT_DIR$/benchmark_notes/DepthStackCallPerformanceCheck.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/benchmark_notes/HaltExceptionOnStreams.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jmh/DepthStackCallPerformanceCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionOnStreamsPerformanceCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionPerformanceCheck.java" afterDir="false" />
+    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="add experiment javax validation JSR 303">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/HaltException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/HaltException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/ResultWrappers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/ResultWrappers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/NotExValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/NotExValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/NotExFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NotExFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ValidatorExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidatorExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jmh/BasicPerformanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jmh/BasicPerformanceCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jmh/DepthStackCallPerformanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jmh/DepthStackCallPerformanceCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionOnStreamsPerformanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionOnStreamsPerformanceCheck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,35 +65,9 @@
       <recent name="D:\java\NotEx\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DepthStackCallPerformanceCheck">
-    <configuration name="DepthStackCallPerformanceCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jmh.DepthStackCallPerformanceCheck" />
-      <module name="notex" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jmh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.HaltExceptionOnStreamsPerformanceCheck">
     <configuration name="HaltExceptionOnStreamsPerformanceCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jmh.HaltExceptionOnStreamsPerformanceCheck" />
-      <module name="notex" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jmh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HaltExceptionPerformanceCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jmh.HaltExceptionPerformanceCheck" />
       <module name="notex" />
       <extension name="coverage">
         <pattern>
@@ -126,21 +102,40 @@
       <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="UsageInStreams.standard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsageInStreams.withNotEx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
-      <option name="METHOD_NAME" value="standard" />
+      <option name="METHOD_NAME" value="withNotEx" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsageInStreams.withNotExHalt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Validation.validation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
-      <option name="METHOD_NAME" value="withNotExHalt" />
+      <option name="MAIN_CLASS_NAME" value="Validation" />
+      <option name="METHOD_NAME" value="validation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidatorExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notex" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ValidatorExample" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidatorExample.validatorExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notex" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ValidatorExample" />
+      <option name="METHOD_NAME" value="validatorExample" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DepthStackCallPerformanceCheck" />
-        <item itemvalue="Application.HaltExceptionPerformanceCheck" />
         <item itemvalue="Application.HaltExceptionOnStreamsPerformanceCheck" />
-        <item itemvalue="JUnit.UsageInStreams.withNotExHalt" />
-        <item itemvalue="JUnit.UsageInStreams.standard" />
+        <item itemvalue="JUnit.UsageInStreams.withNotEx" />
+        <item itemvalue="JUnit.ValidatorExample.validatorExample" />
+        <item itemvalue="JUnit.ValidatorExample" />
+        <item itemvalue="JUnit.Validation.validation" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +171,14 @@
       <workItem from="1634937845463" duration="2031000" />
       <workItem from="1634994573014" duration="6122000" />
       <workItem from="1635021189500" duration="7383000" />
-      <workItem from="1635086122908" duration="2685000" />
+      <workItem from="1635086122908" duration="3075000" />
+      <workItem from="1635090384138" duration="725000" />
+      <workItem from="1635105576678" duration="3101000" />
+      <workItem from="1635113521588" duration="1444000" />
+      <workItem from="1635320965670" duration="9100000" />
+      <workItem from="1635341439307" duration="638000" />
+      <workItem from="1635403748048" duration="5577000" />
+      <workItem from="1635424881564" duration="1817000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1613069596021</created>
@@ -304,7 +306,77 @@
       <option name="project" value="LOCAL" />
       <updated>1634941426084</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="public access">
+      <created>1635089193268</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1635089193268</updated>
+    </task>
+    <task id="LOCAL-00020" summary="peek to check notification presence">
+      <created>1635089207920</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1635089207920</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update tests and usages">
+      <created>1635089219630</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1635089219630</updated>
+    </task>
+    <task id="LOCAL-00022" summary="remove msg in notification">
+      <created>1635327906627</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1635327906627</updated>
+    </task>
+    <task id="LOCAL-00023" summary="remove msg in notification">
+      <created>1635327910072</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1635327910072</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add validation std object">
+      <created>1635327925735</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1635327925735</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update usage examples">
+      <created>1635327936991</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1635327936991</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add notex flow example">
+      <created>1635327944754</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1635327944754</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add validation example">
+      <created>1635327952586</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1635327952586</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add experiment javax validation JSR 303">
+      <created>1635329832829</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1635329832829</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,8 +395,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gitignore" />
-    <MESSAGE value="remove sources from gh page" />
     <MESSAGE value="update" />
     <MESSAGE value="add idea files" />
     <MESSAGE value="idea config" />
@@ -341,6 +411,15 @@
     <MESSAGE value="update example with new signature" />
     <MESSAGE value="rename: resolve -&gt; apply" />
     <MESSAGE value="add performance check" />
-    <option name="LAST_COMMIT_MESSAGE" value="add performance check" />
+    <MESSAGE value="public access" />
+    <MESSAGE value="peek to check notification presence" />
+    <MESSAGE value="update tests and usages" />
+    <MESSAGE value="remove msg in notification" />
+    <MESSAGE value="add validation std object" />
+    <MESSAGE value="update usage examples" />
+    <MESSAGE value="add notex flow example" />
+    <MESSAGE value="add validation example" />
+    <MESSAGE value="add experiment javax validation JSR 303" />
+    <option name="LAST_COMMIT_MESSAGE" value="add experiment javax validation JSR 303" />
   </component>
 </project>

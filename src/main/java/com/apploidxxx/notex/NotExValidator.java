@@ -17,7 +17,7 @@ public final class NotExValidator {
         Set<ConstraintViolation<T>> violationSet = validator.validate(object);
 
         if (violationSet.isEmpty()) {
-            return Result.of(true);
+            return Result.ok(true);
         } else {
             ValidationError<String, String> validationError = new ValidationError<>();
             violationSet.forEach(violation -> {
