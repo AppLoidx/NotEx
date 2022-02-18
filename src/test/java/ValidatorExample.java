@@ -13,7 +13,9 @@ public class ValidatorExample {
 
         boolean isValid = NotExValidator.validate(user)
                 .resolve(validationError -> {
-                    validationError.onEachError((field, msg) -> System.out.printf("Ошибка в поле %s : %s%n", field, msg));
+                    validationError.onEachError(
+                            (field, msg) ->
+                                    System.out.printf("Error in field %s : %s%n", field, msg));
                     return false;
                 });
 
