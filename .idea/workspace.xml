@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="add experiment javax validation JSR 303">
+    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="rename of to err, ok">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/exception/ExceptionWrapperUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/example/BadResultUsage_Apply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/example/ExceptionWrapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/NotExValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/NotExValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/NotExFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NotExFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UsageInStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Validation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ValidatorExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidatorExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/jmh/BasicPerformanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jmh/BasicPerformanceCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jmh/DepthStackCallPerformanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jmh/DepthStackCallPerformanceCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionOnStreamsPerformanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jmh/HaltExceptionOnStreamsPerformanceCheck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -65,16 +60,14 @@
       <recent name="D:\java\NotEx\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HaltExceptionOnStreamsPerformanceCheck">
-    <configuration name="HaltExceptionOnStreamsPerformanceCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jmh.HaltExceptionOnStreamsPerformanceCheck" />
-      <module name="notex" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jmh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.ExceptionWrapping.exceptionHandleWithArg">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,6 +82,7 @@
       <setting name="profiles" value="" />
       <setting name="aliases" value="" />
       <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
@@ -100,13 +94,36 @@
       <setting name="replPortFileType" value="STANDARD" />
       <setting name="customPortFile" value="" />
       <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="UsageInStreams.withNotEx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExceptionWrapping.exceptionHandle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsageInStreams" />
-      <option name="METHOD_NAME" value="withNotEx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example" />
+      <option name="MAIN_CLASS_NAME" value="example.ExceptionWrapping" />
+      <option name="METHOD_NAME" value="exceptionHandle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExceptionWrapping.exceptionHandleWithArg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example" />
+      <option name="MAIN_CLASS_NAME" value="example.ExceptionWrapping" />
+      <option name="METHOD_NAME" value="exceptionHandleWithArg" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,8 +160,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HaltExceptionOnStreamsPerformanceCheck" />
-        <item itemvalue="JUnit.UsageInStreams.withNotEx" />
+        <item itemvalue="JUnit.ExceptionWrapping.exceptionHandleWithArg" />
+        <item itemvalue="JUnit.ExceptionWrapping.exceptionHandle" />
         <item itemvalue="JUnit.ValidatorExample.validatorExample" />
         <item itemvalue="JUnit.ValidatorExample" />
         <item itemvalue="JUnit.Validation.validation" />
@@ -178,7 +195,22 @@
       <workItem from="1635320965670" duration="9100000" />
       <workItem from="1635341439307" duration="638000" />
       <workItem from="1635403748048" duration="5577000" />
-      <workItem from="1635424881564" duration="1817000" />
+      <workItem from="1635424881564" duration="2431000" />
+      <workItem from="1635603635174" duration="663000" />
+      <workItem from="1635779895906" duration="10000" />
+      <workItem from="1636293514894" duration="4000" />
+      <workItem from="1638203011673" duration="2225000" />
+      <workItem from="1638276288116" duration="9000" />
+      <workItem from="1638461690329" duration="1218000" />
+      <workItem from="1638476739754" duration="1206000" />
+      <workItem from="1638626657446" duration="132000" />
+      <workItem from="1643726888383" duration="618000" />
+      <workItem from="1643817202544" duration="39000" />
+      <workItem from="1644675043649" duration="1570000" />
+      <workItem from="1644768713284" duration="4000" />
+      <workItem from="1644852901746" duration="1087000" />
+      <workItem from="1644946674103" duration="16000" />
+      <workItem from="1645192909831" duration="1168000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1613069596021</created>
@@ -376,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635329832829</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="rename of to err, ok">
+      <created>1635429713204</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1635429713204</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +434,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="add idea files" />
     <MESSAGE value="idea config" />
     <MESSAGE value="add java test version" />
@@ -420,6 +458,7 @@
     <MESSAGE value="add notex flow example" />
     <MESSAGE value="add validation example" />
     <MESSAGE value="add experiment javax validation JSR 303" />
-    <option name="LAST_COMMIT_MESSAGE" value="add experiment javax validation JSR 303" />
+    <MESSAGE value="rename of to err, ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename of to err, ok" />
   </component>
 </project>
