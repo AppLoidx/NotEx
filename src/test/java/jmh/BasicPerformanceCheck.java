@@ -2,16 +2,19 @@ package jmh;
 
 import com.apploidxxx.notex.Notification;
 import com.apploidxxx.notex.Result;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.Fork;
-import org.openjdk.jmh.annotations.Scope;
-import org.openjdk.jmh.annotations.State;
+import org.openjdk.jmh.annotations.*;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
-@State(Scope.Benchmark)
+@State(Scope.Thread)
+@BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
+@Warmup(iterations = 5, time = 1)
+@Measurement(iterations = 5, time = 1)
+@Fork(5)
 public class BasicPerformanceCheck {
-    @Fork(value = 1, warmups = 1)
+
     @Benchmark
     public Integer benchException() {
         Integer value;
@@ -25,7 +28,6 @@ public class BasicPerformanceCheck {
         return value;
     }
 
-    @Fork(value = 1, warmups = 1)
     @Benchmark
     public Integer benchNotEx() {
         return withNotEx().resolve(notification -> valueIfExceptionOccurs());
