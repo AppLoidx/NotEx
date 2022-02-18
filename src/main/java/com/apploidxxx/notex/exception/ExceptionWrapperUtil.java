@@ -6,7 +6,7 @@ import com.apploidxxx.notex.Result;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public final class ExceptionWrapperUtil<T, S> {
+public final class ExceptionWrapperUtil {
 
     public static <T, S> Result<T, S> wrapException(Supplier<T> supplier, Function<RuntimeException, S> onError) {
         try {
