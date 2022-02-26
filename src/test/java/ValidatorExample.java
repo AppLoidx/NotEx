@@ -12,10 +12,14 @@ public class ValidatorExample {
         User user = new User(5, null);
 
         boolean isValid = NotExValidator.validate(user)
-                .resolve(validationError -> {
-                    validationError.onEachError(
-                            (field, msg) ->
-                                    System.out.printf("Error in field %s : %s%n", field, msg));
+                .resolve(errorNotification -> {
+
+                    errorNotification.getErrorObject()
+                            .ifPresent((errObj ->
+                                    errObj.onEachError((field, msg) ->
+                                            System.out.printf("Error in field %s : %s%n", field, msg))));
+
+
                     return false;
                 });
 

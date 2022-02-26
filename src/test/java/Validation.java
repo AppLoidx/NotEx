@@ -12,7 +12,9 @@ public class Validation {
         final UserFields userFields = new UserFields(1, -1, 1, -1);
         boolean valid = validate(userFields)
                 .resolve(errorObject -> {
-                    errorObject.onEachError((field, error) -> System.out.printf("Error on '%s' : %s%n", field, error));
+                    errorObject.getErrorObject()
+                            .ifPresent(errObj -> errObj
+                                    .onEachError((field, error) -> System.out.printf("Error on '%s' : %s%n", field, error)));
                     return false;
                 });
     }

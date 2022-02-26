@@ -15,8 +15,8 @@ public class BadResultUsage_Apply {
                 .resolveFrom(String::length)
                 .apply(this::assertOdd)
                 .apply(this::assertTrue)
-                .resolve(val -> val, errorObject -> {
-                    log.info(errorObject);
+                .resolve(val -> val, notification -> {
+                    log.info(notification.getErrorObject().orElse("Error"));
                     return false;
                 });
 

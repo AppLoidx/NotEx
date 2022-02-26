@@ -19,7 +19,7 @@ public class BasicTest {
             .apply(this::assertOdd)
             .apply(this::assertTrue)
             .resolve(val -> val, errorObject -> {
-                log.info(errorObject);
+                errorObject.getErrorObject().ifPresent(log::info);
                 return false;
             });
 

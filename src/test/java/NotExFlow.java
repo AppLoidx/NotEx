@@ -11,7 +11,7 @@ public class NotExFlow {
                 .apply(this::minusOne)
                 .apply(this::minusTwo)
                 .apply(this::minusThree)
-                .resolve(num -> "Number is " + num, errorObject -> errorObject);
+                .resolve(num -> "Number is " + num, notification -> notification.getErrorObject().orElse("Error"));
         System.out.println(result);
 
 
