@@ -55,7 +55,7 @@ public class Result<T, S> {
      * @param <R> result type
      * @return final result
      */
-    public <R> R resolve(Function<T, R> function, Resolvable<S, R> resolvable) {
+    public <R> R resolve(Function<T, R> function, Resolvable<Notification<S>, R> resolvable) {
         return errorObject()
                 .map(resolvable::apply)
                 .orElseGet(() -> function.apply(object));
@@ -67,14 +67,14 @@ public class Result<T, S> {
      * @param resolvable functional interface to manage the occurred notification
      * @return final result
      */
-    public T resolve(Resolvable<S, T> resolvable) {
+    public T resolve(Resolvable<Notification<S>, T> resolvable) {
         return errorObject()
                 .map(resolvable::apply)
                 .orElse(object);
     }
 
-    private Optional<S> errorObject() {
-        return notification != null ? notification.getErrorObject() : Optional.empty();
+    private Optional<Notification<S>> errorObject() {
+        return Optional.ofNullable(notification);
     }
 
     /**
@@ -87,6 +87,18 @@ public class Result<T, S> {
     public <R> Result<R, S> apply(Function<T, Result<R, S>> function) {
         return getNotification().<Result<R, S>>map(Result::err)
                 .orElseGet(() -> function.apply(this.object));
+    }
+
+    /**
+     * It should be used in the middle of the "notex" chain
+     *
+     * @param function action that will be performed
+     * @param errFunction error handler
+     * @return intermediate result
+     */
+    public <R> Result<R, S> apply(Function<T, Result<R, S>> function, Function<Notification<S>, Result<R, S>> errFunction) {
+        return getNotification().<Result<R, S>>map(Result::err)
+                .orElseGet(() -> function.apply(this.object).resolve(Result::ok, errFunction::apply));
     }
 
     /**
