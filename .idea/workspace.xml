@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="rename of to err, ok">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/exception/ExceptionWrapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/example/BadResultUsage_Apply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/example/ExceptionWrapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="raw update nested call doc">
+      <change afterPath="$PROJECT_DIR$/markdown-docs/ru/CustomErrorHandler.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/example/ApplyWithCustomErrorHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/NotExFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NotExFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Validation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ValidatorExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidatorExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jmh/BasicPerformanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jmh/BasicPerformanceCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/BadResultUsage_Apply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/BadResultUsage_Apply.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +62,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\java\NotEx\assets" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\NotEx\markdown-docs\ru" />
+      <recent name="D:\java\NotEx" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExceptionWrapping.exceptionHandleWithArg">
+  <component name="RunManager" selected="JUnit.ApplyWithCustomErrorHandler.goodUsage">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -97,6 +104,22 @@
       <setting name="focusEditor" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="ApplyWithCustomErrorHandler.goodUsage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example" />
+      <option name="MAIN_CLASS_NAME" value="example.ApplyWithCustomErrorHandler" />
+      <option name="METHOD_NAME" value="goodUsage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExceptionWrapping.exceptionHandle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
       <extension name="coverage">
@@ -129,16 +152,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Validation.validation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="notex" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Validation" />
-      <option name="METHOD_NAME" value="validation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ValidatorExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notex" />
       <option name="PACKAGE_NAME" value="" />
@@ -160,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApplyWithCustomErrorHandler.goodUsage" />
         <item itemvalue="JUnit.ExceptionWrapping.exceptionHandleWithArg" />
         <item itemvalue="JUnit.ExceptionWrapping.exceptionHandle" />
         <item itemvalue="JUnit.ValidatorExample.validatorExample" />
         <item itemvalue="JUnit.ValidatorExample" />
-        <item itemvalue="JUnit.Validation.validation" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +223,9 @@
       <workItem from="1644768713284" duration="4000" />
       <workItem from="1644852901746" duration="1087000" />
       <workItem from="1644946674103" duration="16000" />
-      <workItem from="1645192909831" duration="1168000" />
+      <workItem from="1645192909831" duration="5339000" />
+      <workItem from="1645574068765" duration="19000" />
+      <workItem from="1645883454931" duration="2179000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1613069596021</created>
@@ -415,7 +430,91 @@
       <option name="project" value="LOCAL" />
       <updated>1635429713204</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="apple example">
+      <created>1645194352138</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194352138</updated>
+    </task>
+    <task id="LOCAL-00031" summary="change jmh config">
+      <created>1645194372768</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194372768</updated>
+    </task>
+    <task id="LOCAL-00032" summary="create exception wrapper">
+      <created>1645194386003</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194386003</updated>
+    </task>
+    <task id="LOCAL-00033" summary="exception wrapping example">
+      <created>1645194397152</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194397152</updated>
+    </task>
+    <task id="LOCAL-00034" summary="formatting">
+      <created>1645194405102</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194405102</updated>
+    </task>
+    <task id="LOCAL-00035" summary="idea things">
+      <created>1645194411377</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194411377</updated>
+    </task>
+    <task id="LOCAL-00036" summary="remove unused generics">
+      <created>1645194489475</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194489476</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add workspace xml">
+      <created>1645194496953</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194496953</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update">
+      <created>1645194591335</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194591335</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update docs">
+      <created>1645197993685</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1645197993685</updated>
+    </task>
+    <task id="LOCAL-00040" summary="raw update nested call doc">
+      <created>1645199405560</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1645199405560</updated>
+    </task>
+    <task id="LOCAL-00041" summary="raw update nested call doc">
+      <created>1645199715595</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1645199715595</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,17 +533,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add idea files" />
-    <MESSAGE value="idea config" />
-    <MESSAGE value="add java test version" />
-    <MESSAGE value="update readme" />
-    <MESSAGE value=".idea config" />
-    <MESSAGE value="add jmh for performance check" />
-    <MESSAGE value="add stream wrapper" />
-    <MESSAGE value="experiment with streams" />
-    <MESSAGE value="fix comment" />
-    <MESSAGE value="add gitignore" />
-    <MESSAGE value="change signature and method name" />
     <MESSAGE value="change javadoc" />
     <MESSAGE value="update example with new signature" />
     <MESSAGE value="rename: resolve -&gt; apply" />
@@ -459,6 +547,17 @@
     <MESSAGE value="add validation example" />
     <MESSAGE value="add experiment javax validation JSR 303" />
     <MESSAGE value="rename of to err, ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename of to err, ok" />
+    <MESSAGE value="apple example" />
+    <MESSAGE value="change jmh config" />
+    <MESSAGE value="create exception wrapper" />
+    <MESSAGE value="exception wrapping example" />
+    <MESSAGE value="formatting" />
+    <MESSAGE value="idea things" />
+    <MESSAGE value="remove unused generics" />
+    <MESSAGE value="add workspace xml" />
+    <MESSAGE value="update" />
+    <MESSAGE value="update docs" />
+    <MESSAGE value="raw update nested call doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="raw update nested call doc" />
   </component>
 </project>
