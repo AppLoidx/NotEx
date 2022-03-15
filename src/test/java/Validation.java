@@ -1,5 +1,5 @@
-import com.apploidxxx.notex.Notification;
-import com.apploidxxx.notex.Result;
+import com.apploidxxx.notex.core.Notification;
+import com.apploidxxx.notex.core.Result;
 import com.apploidxxx.notex.ValidationError;
 import lombok.Getter;
 import org.junit.Test;
