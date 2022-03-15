@@ -1,7 +1,7 @@
 package example;
 
-import com.apploidxxx.notex.Notification;
-import com.apploidxxx.notex.Result;
+import com.apploidxxx.notex.core.Notification;
+import com.apploidxxx.notex.core.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -21,6 +21,7 @@ public class BadResultUsage_Apply {
                 });
 
         log.info(value.toString());
+
     }
 
 

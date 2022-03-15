@@ -1,7 +1,7 @@
 package jmh;
 
-import com.apploidxxx.notex.Notification;
-import com.apploidxxx.notex.Result;
+import com.apploidxxx.notex.core.Notification;
+import com.apploidxxx.notex.core.Result;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
