@@ -1,4 +1,4 @@
-package com.apploidxxx.notex;
+package com.apploidxxx.notex.core;
 
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
@@ -14,7 +14,7 @@ import java.util.function.Function;
  */
 @SuppressWarnings("unused")
 @Getter
-public class Result<T, S> {
+public class Result<T, S> extends VoidResult {
 
     private final T object;
     @Nullable
@@ -61,6 +61,15 @@ public class Result<T, S> {
                 .orElseGet(() -> function.apply(object));
     }
 
+
+    public <R> R resolve(R onSuccess, R onError) {
+        return isOk() ? onSuccess : onError;
+    }
+
+    public T resolve(T onError) {
+        return resolve(object, onError);
+    }
+
     /**
      * It should be used in the end of the "notex" chain
      *
@@ -68,9 +77,7 @@ public class Result<T, S> {
      * @return final result
      */
     public T resolve(Resolvable<Notification<S>, T> resolvable) {
-        return errorObject()
-                .map(resolvable::apply)
-                .orElse(object);
+        return resolve(Function.identity(), resolvable);
     }
 
     private Optional<Notification<S>> errorObject() {
@@ -100,7 +107,6 @@ public class Result<T, S> {
         return getNotification().<Result<R, S>>map(Result::err)
                 .orElseGet(() -> function.apply(this.object).resolve(Result::ok, errFunction::apply));
     }
-
     /**
      * It should be used in the beginning of the "notex" chain
      * @param function action that will be performed
@@ -132,6 +138,18 @@ public class Result<T, S> {
     /**
      * Result factory method
      *
+     * @param <T> answer (result) type
+     * @param <S> notification error-object type
+     * @return instance of {@link Result}
+     * @see Result#of(Object, Notification)
+     */
+    public static <T, S> Result<T, S> ok() {
+        return new Result<>(null);
+    }
+
+    /**
+     * Result factory method
+     *
      * @param object answer (result) object
      * @param notification occurred notification
      * @param <T> answer (result) type
@@ -151,6 +169,16 @@ public class Result<T, S> {
      */
     public static <T, S> Result<T, S> err(Notification<S> notification) {
         return new Result<>(null, notification);
+    }
+
+    /**
+     *
+     * @param <T> answer (result) type
+     * @param <S> notification error-object type
+     * @return instance of {@link Result}
+     */
+    public static <T, S> Result<T, S> err() {
+        return new Result<>(null, Notification.empty());
     }
 
 
