@@ -1,4 +1,4 @@
-package com.apploidxxx.notex;
+package com.apploidxxx.notex.core;
 
 import java.util.function.Function;
 

@@ -1,4 +1,4 @@
-package com.apploidxxx.notex;
+package com.apploidxxx.notex.core;
 
 import lombok.RequiredArgsConstructor;
 
@@ -23,6 +23,16 @@ public class Notification<T> {
      */
     public static <T> Notification<T> of(T object) {
         return new Notification<>(object);
+    }
+
+    /**
+     * Factory method
+     *
+     * @param <T> type of object within {@link Notification}
+     * @return {@link Notification} instance
+     */
+    public static <T> Notification<T> empty() {
+        return new Notification<>(null);
     }
 
     /**

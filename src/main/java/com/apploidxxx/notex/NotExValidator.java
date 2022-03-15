@@ -1,5 +1,7 @@
 package com.apploidxxx.notex;
 
+import com.apploidxxx.notex.core.Notification;
+import com.apploidxxx.notex.core.Result;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
