@@ -1,6 +1,6 @@
 package example;
 
-import com.apploidxxx.notex.Result;
+import com.apploidxxx.notex.core.Result;
 import com.apploidxxx.notex.exception.ExceptionWrapperUtil;
 import org.junit.Test;
 import static org.junit.Assert.*;
