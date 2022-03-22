@@ -1,4 +1,4 @@
-import com.apploidxxx.notex.HaltException;
+import com.apploidxxx.notex.exception.HaltException;
 import com.apploidxxx.notex.ResultWrappers;
 import com.apploidxxx.notex.core.Notification;
 import com.apploidxxx.notex.core.Result;

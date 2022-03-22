@@ -1,6 +1,4 @@
-package com.apploidxxx.notex;
-
-import java.util.List;
+package com.apploidxxx.notex.exception;
 
 public class HaltException extends RuntimeException {
 

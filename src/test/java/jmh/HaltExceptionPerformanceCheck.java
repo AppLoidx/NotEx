@@ -1,6 +1,6 @@
 package jmh;
 
-import com.apploidxxx.notex.HaltException;
+import com.apploidxxx.notex.exception.HaltException;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;

@@ -2,6 +2,7 @@ package com.apploidxxx.notex;
 
 import com.apploidxxx.notex.core.Notification;
 import com.apploidxxx.notex.core.Result;
+import com.apploidxxx.notex.exception.HaltException;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
