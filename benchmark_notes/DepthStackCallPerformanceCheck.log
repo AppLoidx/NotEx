@@ -1213,4 +1213,12 @@ DepthStackCallPerformanceCheck.benchNotEx           50  avgt   25     37,355 ± 
 DepthStackCallPerformanceCheck.benchNotEx          100  avgt   25     74,598 ±   0,327  ns/op
 DepthStackCallPerformanceCheck.benchNotEx          150  avgt   25    106,736 ±   0,578  ns/op
 
-Process finished with exit code 0
+With custom stacktrace:
+
+DepthStackCallPerformanceCheck.benchNotEx            0  avgt   25   1170,197 ±  11,239  ns/op
+DepthStackCallPerformanceCheck.benchNotEx            5  avgt   25   1386,195 ±  37,038  ns/op
+DepthStackCallPerformanceCheck.benchNotEx           10  avgt   25   1570,837 ±  24,449  ns/op
+DepthStackCallPerformanceCheck.benchNotEx           20  avgt   25   2118,466 ±  37,725  ns/op
+DepthStackCallPerformanceCheck.benchNotEx           50  avgt   25   3243,824 ±  21,093  ns/op
+DepthStackCallPerformanceCheck.benchNotEx          100  avgt   25   5506,074 ± 102,075  ns/op
+DepthStackCallPerformanceCheck.benchNotEx          150  avgt   25   7743,122 ± 216,164  ns/op
