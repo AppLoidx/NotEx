@@ -44,6 +44,9 @@ gson.fromJson(response, responseClass)
                 Validable validable = (Validable) res;
                 return validable.validateRequired();
             }
+        })
+        .resolve(e -> {
+            e -> "Can't parse json response: " + e.getErrorMessage();
         });
 ```
 
