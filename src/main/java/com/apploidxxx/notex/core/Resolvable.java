@@ -1,7 +1,5 @@
 package com.apploidxxx.notex.core;
 
-import java.util.function.Function;
-
 /**
  * Functional interface for resolving results with notifications
  *

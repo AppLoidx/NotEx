@@ -12,7 +12,7 @@ import java.util.function.Function;
  * @param <T> type for response
  * @param <S> type for notification's error-object
  */
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "PMD.TooManyMethods"})
 @Getter
 public class Result<T, S> extends VoidResult {
 
@@ -26,6 +26,7 @@ public class Result<T, S> extends VoidResult {
      * @param notification occurred notification (don't use null here, use {@link Result#Result(Object)} instead)
      */
     public Result(T object, @NotNull Notification<S> notification) {
+        super();
         this.object = object;
         this.notification = notification;
     }
@@ -35,6 +36,7 @@ public class Result<T, S> extends VoidResult {
      * @param object result object (answer)
      */
     public Result(T object) {
+        super();
         this.object = object;
         this.notification = null; // NOPMD
     }
@@ -61,7 +63,7 @@ public class Result<T, S> extends VoidResult {
                 .orElseGet(() -> function.apply(object));
     }
 
-
+    @Override
     public <R> R resolve(R onSuccess, R onError) {
         return isOk() ? onSuccess : onError;
     }
@@ -118,6 +120,7 @@ public class Result<T, S> extends VoidResult {
                 .orElseGet(() -> Result.ok(function.apply(this.object)));
     }
 
+    @Override
     public boolean isOk() {
         return notification == null;
     }
