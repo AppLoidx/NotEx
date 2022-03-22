@@ -2,7 +2,7 @@ package jmh;
 
 import com.apploidxxx.notex.core.Notification;
 import com.apploidxxx.notex.core.Result;
-import com.apploidxxx.notex.ResultWrappers;
+import com.apploidxxx.notex.ResultWrapperUtil;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
@@ -50,7 +50,7 @@ public class HaltExceptionOnStreamsPerformanceCheck {
 
     private List<Integer> haltExample(int depth) {
         try {
-            return ResultWrappers
+            return ResultWrapperUtil
                     .streamHaltIfError(stream
                             .map(n -> doSomethingWithNotEx(n, depth)))
                     .collect(Collectors.toList());

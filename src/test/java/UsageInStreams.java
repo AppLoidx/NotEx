@@ -1,5 +1,5 @@
 import com.apploidxxx.notex.exception.HaltException;
-import com.apploidxxx.notex.ResultWrappers;
+import com.apploidxxx.notex.ResultWrapperUtil;
 import com.apploidxxx.notex.core.Notification;
 import com.apploidxxx.notex.core.Result;
 import lombok.extern.slf4j.Slf4j;
@@ -62,7 +62,7 @@ public class UsageInStreams {
                 () -> {
                     // halt with static exception
                     List<Integer> list =
-                            ResultWrappers.streamHaltIfError(stream.get()
+                            ResultWrapperUtil.streamHaltIfError(stream.get()
                                             .map(this::doSomethingWithNotEx))
                                     .collect(Collectors.toList()); // exception
                     log.info(list.toString());

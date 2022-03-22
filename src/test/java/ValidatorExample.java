@@ -1,4 +1,4 @@
-import com.apploidxxx.notex.NotExValidator;
+import com.apploidxxx.notex.NotExValidatorUtil;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -11,7 +11,7 @@ public class ValidatorExample {
     public void validatorExample() {
         User user = new User(5, null);
 
-        boolean isValid = NotExValidator.validate(user)
+        boolean isValid = NotExValidatorUtil.validate(user)
                 .resolve(errorNotification -> {
 
                     errorNotification.getErrorObject()

@@ -9,14 +9,14 @@ import jakarta.validation.ValidatorFactory;
 
 import java.util.Set;
 
-public final class NotExValidator {
-    private final static ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-    private final static Validator validator = factory.getValidator();
+public final class NotExValidatorUtil {
+    private final static ValidatorFactory FACTORY = Validation.buildDefaultValidatorFactory();
+    private final static Validator VALIDATOR = FACTORY.getValidator();
 
-    private NotExValidator() {}
+    private NotExValidatorUtil() {}
 
     public static <T> Result<Boolean, ValidationError<String, String>> validate(T object) {
-        Set<ConstraintViolation<T>> violationSet = validator.validate(object);
+        Set<ConstraintViolation<T>> violationSet = VALIDATOR.validate(object);
 
         if (violationSet.isEmpty()) {
             return Result.ok(true);
