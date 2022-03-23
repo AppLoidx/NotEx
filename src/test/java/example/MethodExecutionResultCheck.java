@@ -10,11 +10,11 @@ import static org.junit.Assert.assertEquals;
 @Slf4j
 public class MethodExecutionResultCheck {
 
-    void method(boolean failure)  {
+    void method(boolean failure) {
         if (failure) throw new IllegalArgumentException();
     }
 
-    VoidResult methodNotEx(boolean failure) {
+    VoidResult<String> methodNotEx(boolean failure) {
         if (failure) return Result.err();
         return Result.ok();
     }
@@ -32,7 +32,8 @@ public class MethodExecutionResultCheck {
     }
 
     public int methodCheckNotEx(boolean failure) {
-        return methodNotEx(failure)
+        VoidResult<String> voidResult = methodNotEx(failure);
+        return voidResult
                 .resolve(0, -1);
     }
 

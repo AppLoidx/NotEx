@@ -2,9 +2,7 @@ package com.apploidxxx.notex.core;
 
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
 import java.util.function.Function;
 
 /**
@@ -14,11 +12,10 @@ import java.util.function.Function;
  */
 @SuppressWarnings({"unused", "PMD.TooManyMethods"})
 @Getter
-public class Result<T, S> extends VoidResult {
+public class Result<T, S> extends VoidResult<S> {
 
     private final T object;
-    @Nullable
-    private final Notification<S> notification;
+
 
     /**
      *
@@ -26,9 +23,8 @@ public class Result<T, S> extends VoidResult {
      * @param notification occurred notification (don't use null here, use {@link Result#Result(Object)} instead)
      */
     public Result(T object, @NotNull Notification<S> notification) {
-        super();
+        super(notification);
         this.object = object;
-        this.notification = notification;
     }
 
     /**
@@ -38,16 +34,9 @@ public class Result<T, S> extends VoidResult {
     public Result(T object) {
         super();
         this.object = object;
-        this.notification = null; // NOPMD
     }
 
-    /**
-     *
-     * @return optional notification
-     */
-    public Optional<Notification<S>> getNotification() {
-        return Optional.ofNullable(this.notification);
-    }
+
 
     /**
      * It should be used in the end of the "notex" chain
@@ -58,15 +47,11 @@ public class Result<T, S> extends VoidResult {
      * @return final result
      */
     public <R> R resolve(Function<T, R> function, Resolvable<Notification<S>, R> resolvable) {
-        return errorObject()
+        return getNotification()
                 .map(resolvable::apply)
                 .orElseGet(() -> function.apply(object));
     }
 
-    @Override
-    public <R> R resolve(R onSuccess, R onError) {
-        return isOk() ? onSuccess : onError;
-    }
 
     public T resolve(T onError) {
         return resolve(object, onError);
@@ -82,9 +67,6 @@ public class Result<T, S> extends VoidResult {
         return resolve(Function.identity(), resolvable);
     }
 
-    private Optional<Notification<S>> errorObject() {
-        return Optional.ofNullable(notification);
-    }
 
     /**
      * It should be used in the middle of the "notex" chain
@@ -118,11 +100,6 @@ public class Result<T, S> extends VoidResult {
     public <R> Result<R, S> resolveFrom(Function<T, ? extends R> function) {
         return getNotification().<Result<R, S>>map(Result::err)
                 .orElseGet(() -> Result.ok(function.apply(this.object)));
-    }
-
-    @Override
-    public boolean isOk() {
-        return notification == null;
     }
 
     /**
@@ -172,6 +149,10 @@ public class Result<T, S> extends VoidResult {
      */
     public static <T, S> Result<T, S> err(Notification<S> notification) {
         return new Result<>(null, notification);
+    }
+
+    public static <T, S> Result<T, S> err(S errorObject) {
+        return err(Notification.of(errorObject));
     }
 
     /**

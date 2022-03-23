@@ -1,6 +1,7 @@
 package com.apploidxxx.notex.core;
 
 import lombok.RequiredArgsConstructor;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
@@ -39,6 +40,7 @@ public class Notification<T> {
      *
      * @return optional error-object
      */
+    @NotNull
     public Optional<T> getErrorObject() {
         return Optional.ofNullable(errorObject);
     }

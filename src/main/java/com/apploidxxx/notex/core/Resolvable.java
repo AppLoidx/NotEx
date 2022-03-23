@@ -1,5 +1,7 @@
 package com.apploidxxx.notex.core;
 
+import org.jetbrains.annotations.Nullable;
+
 /**
  * Functional interface for resolving results with notifications
  *
