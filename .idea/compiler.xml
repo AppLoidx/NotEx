@@ -14,4 +14,9 @@
       <module name="notex" target="11" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="notex" options="" />
+    </option>
+  </component>
 </project>
