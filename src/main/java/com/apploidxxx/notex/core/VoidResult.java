@@ -5,7 +5,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public abstract class VoidResult<S> {
+public class VoidResult<S> {
 
     @Nullable
     private final Notification<S> notification;
@@ -15,7 +15,7 @@ public abstract class VoidResult<S> {
     }
 
     protected VoidResult() {
-        this.notification = null;
+        this(null);
     }
 
     public boolean isOk() {
@@ -23,7 +23,7 @@ public abstract class VoidResult<S> {
     }
 
     public <R> R resolve(R onSuccess, R onError) {
-        return isOk() ? onSuccess : onError;
+        return resolve(() -> onSuccess, () -> onError);
     }
 
 
@@ -39,11 +39,11 @@ public abstract class VoidResult<S> {
 
     @Nullable
     public <R> R solve(R onSuccess, Resolvable<S, R> resolvable) {
-        if (!isOk() && notification != null) {  // some stupid check
+        if (isOk() || notification == null) { // some stupid check
+            return onSuccess;
+        } else {
             // TODO: re-think about nullable contract and interaction
             return notification.getErrorObject().map(resolvable::apply).orElse(null);
-        } else {
-            return onSuccess;
         }
     }
 
