@@ -3,6 +3,7 @@ package com.apploidxxx.notex.core;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Optional;
 import java.util.function.Function;
 
 /**
@@ -65,6 +66,26 @@ public class Result<T, S> extends VoidResult<S> {
      */
     public T resolve(Resolvable<Notification<S>, T> resolvable) {
         return resolve(Function.identity(), resolvable);
+    }
+
+    public Result<T, S> resolveFor(Class<? extends S> clazz, T onError) {
+        return resolveFor(clazz, (err) -> onError);
+
+    }
+
+    public <X> Result<T, S> resolveFor(Class<? extends S> clazz, Resolvable<Notification<S>, T> resolvable) {
+        Optional<Notification<S>> sNotification = getNotification();
+        if (isOk() || sNotification.isEmpty()) {
+            return this;
+        }
+        Optional<S> errorObject = sNotification.get().getErrorObject();
+
+
+        if (errorObject.isPresent() && clazz.isAssignableFrom(errorObject.get().getClass())) {
+            return Result.ok(resolve(resolvable));
+        } else {
+            return this;
+        }
     }
 
 
