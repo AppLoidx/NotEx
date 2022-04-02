@@ -1,15 +1,13 @@
 package example;
 
-import com.apploidxxx.notex.core.Notification;
 import com.apploidxxx.notex.core.Result;
-import com.apploidxxx.notex.core.VoidResult;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 @Slf4j
-public class ErrorsCompositionExample {
+public class ErrorsInheritanceExample {
 
     private enum ErrorType {
         FIRST, SECOND;
@@ -21,14 +19,6 @@ public class ErrorsCompositionExample {
     }
 
     private static class ErrorObject {
-        private Class<? extends ErrorObject> clazz;
-        ErrorObject() {
-            clazz = this.getClass();
-        }
-
-        public Class<?> getClazz() {
-            return clazz;
-        }
     }
 
     private static class IllegalError extends ErrorObject {
@@ -37,7 +27,7 @@ public class ErrorsCompositionExample {
     private static class ArithmeticError extends ErrorObject {
     }
 
-    private Result<Void, ErrorObject> someDoNotEx(ErrorType errorType) {
+    private Result<Integer, ErrorObject> someDoNotEx(ErrorType errorType) {
         if (errorType == ErrorType.FIRST) return Result.err(new IllegalError());
         else return Result.err(new ArithmeticError());
     }
@@ -59,20 +49,33 @@ public class ErrorsCompositionExample {
 
     @Test
     public void notExErrorHandling() {
-        final int expectedError = -2;
-        int err = 0;
+        final Integer expectedError = -2;
+        Integer err;
 
-//        someDoNotEx(ErrorType.SECOND)
-//                .solve(0, e -> {
-//                    log.info(e.getClass().toString());
-//                    if (e.getClazz() == IllegalError.class) {
-//                        return -1;
-//                    } else if (e.getClass(). == ErrorsCompositionExample.ArithmeticError.class) {
-//                        return -2;
-//                    }
-//
-//                    return 0;
-//                });
+        err = someDoNotEx(ErrorType.SECOND)
+                .solve(0, e -> {
+                    if (e.getClass().isAssignableFrom(IllegalError.class)) {
+                        return -1;
+                    } else if (ErrorsInheritanceExample.ArithmeticError.class.isAssignableFrom(e.getClass())) {
+                        return -2;
+                    }
+
+                    return -3;
+                });
+
+        assertEquals(expectedError, err);
+    }
+
+    @Test
+    public void notExErrorHandling_2() {
+        final Integer expectedError = -2;
+        Integer err;
+
+
+        err = someDoNotEx(ErrorType.SECOND)
+                .resolveFor(IllegalError.class, -1)
+                .resolveFor(ArithmeticError.class, -2)
+                .resolve(-3);
 
         assertEquals(expectedError, err);
     }
