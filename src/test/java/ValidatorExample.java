@@ -11,17 +11,8 @@ public class ValidatorExample {
     public void validatorExample() {
         User user = new User(5, null);
 
-        boolean isValid = NotExValidatorUtil.validate(user)
-                .resolve(errorNotification -> {
-
-                    errorNotification.getErrorObject()
-                            .ifPresent((errObj ->
-                                    errObj.onEachError((field, msg) ->
-                                            System.out.printf("Error in field %s : %s%n", field, msg))));
-
-
-                    return false;
-                });
+        boolean isValid = NotExValidatorUtil.validate(user,
+                (field, msg) -> System.out.printf("Error in field %s : %s%n", field, msg));
 
         System.out.println("No errors : " + isValid);
 

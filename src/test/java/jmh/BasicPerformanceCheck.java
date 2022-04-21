@@ -15,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 @Fork(5)
 public class BasicPerformanceCheck {
 
+    private static final Integer ERROR_VAL = 5;
+
     @Benchmark
     public Integer benchException() {
         Integer value;
@@ -22,7 +24,7 @@ public class BasicPerformanceCheck {
         try {
             value = withException();
         } catch (ArithmeticException exception) {
-            value = valueIfExceptionOccurs();
+            value = ERROR_VAL;
         }
 
         return value;
@@ -30,7 +32,7 @@ public class BasicPerformanceCheck {
 
     @Benchmark
     public Integer benchNotEx() {
-        return withNotEx().resolve(notification -> valueIfExceptionOccurs());
+        return withNotEx().resolve(ERROR_VAL);
     }
 
     private Integer withException() {
@@ -40,9 +42,6 @@ public class BasicPerformanceCheck {
         return Result.err(Notification.of("Arithmetic error"));
     }
 
-    private int valueIfExceptionOccurs() {
-        return 5;
-    }
 
     public static void main(String[] args) throws IOException {
         org.openjdk.jmh.Main.main(args);

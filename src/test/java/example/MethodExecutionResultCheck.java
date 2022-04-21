@@ -32,8 +32,7 @@ public class MethodExecutionResultCheck {
     }
 
     public int methodCheckNotEx(boolean failure) {
-        VoidResult<String> voidResult = methodNotEx(failure);
-        return voidResult
+        return methodNotEx(failure)
                 .resolve(0, -1);
     }
 

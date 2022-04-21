@@ -36,6 +36,7 @@ public class ErrorsInheritanceExample {
     public void stdException() {
         final int expectedError = -2;
         int err = 0;
+
         try {
             someDo(ErrorType.SECOND);
         } catch (IllegalArgumentException e) {
@@ -43,6 +44,7 @@ public class ErrorsInheritanceExample {
         } catch (ArithmeticException e) {
             err = -2;
         }
+
         assertEquals(expectedError, err);
     }
 
@@ -69,10 +71,8 @@ public class ErrorsInheritanceExample {
     @Test
     public void notExErrorHandling_2() {
         final Integer expectedError = -2;
-        Integer err;
 
-
-        err = someDoNotEx(ErrorType.SECOND)
+        Integer err = someDoNotEx(ErrorType.SECOND)
                 .resolveFor(IllegalError.class, -1)
                 .resolveFor(ArithmeticError.class, -2)
                 .resolve(-3);

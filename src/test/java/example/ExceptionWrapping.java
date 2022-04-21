@@ -3,6 +3,8 @@ package example;
 import com.apploidxxx.notex.core.Result;
 import com.apploidxxx.notex.exception.ExceptionWrapperUtil;
 import org.junit.Test;
+
+import static com.apploidxxx.notex.exception.ExceptionWrapperUtil.wrapException;
 import static org.junit.Assert.*;
 
 public class ExceptionWrapping {
@@ -25,7 +27,7 @@ public class ExceptionWrapping {
     @Test
     public void exceptionHandle() {
         Result<Integer, String> result =
-                ExceptionWrapperUtil.wrapException(this::methodWithException, Throwable::getMessage);
+                wrapException(this::methodWithException, Throwable::getMessage);
 
         assertFalse(result.isOk());
 
@@ -34,12 +36,12 @@ public class ExceptionWrapping {
     @Test
     public void exceptionHandleWithArg() {
         Result<Integer, String> resultBad =
-                ExceptionWrapperUtil.wrapException(() -> methodWithException(true), Throwable::getMessage);
+                wrapException(() -> methodWithException(true), Throwable::getMessage);
 
         assertFalse(resultBad.isOk());
 
         Result<Integer, String> resultGood =
-                ExceptionWrapperUtil.wrapException(() -> methodWithException(false), Throwable::getMessage);
+                wrapException(() -> methodWithException(false), Throwable::getMessage);
 
         assertTrue(resultGood.isOk());
         assertEquals(RETURN_RESULT, resultGood.getObject());
