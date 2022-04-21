@@ -9,23 +9,22 @@ import jakarta.validation.ValidatorFactory;
 
 import java.util.Set;
 import java.util.function.BiConsumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 public final class NotExValidatorUtil {
     private final static ValidatorFactory FACTORY = Validation.buildDefaultValidatorFactory();
     private final static Validator VALIDATOR = FACTORY.getValidator();
 
-    private NotExValidatorUtil() {}
+    private NotExValidatorUtil() {
+    }
 
     private static Boolean onEachError(BiConsumer<String, String> consumer,
                                        Notification<ValidationError<String, String>> errorNotification) {
 
-            errorNotification.getErrorObject()
-                    .ifPresent((errObj ->
-                            errObj.onEachError(consumer)));
+        errorNotification.getErrorObject()
+                .ifPresent((errObj ->
+                        errObj.onEachError(consumer)));
 
-            return false;
+        return false;
     }
 
     public static <T> boolean validate(T object, BiConsumer<String, String> consumer) {
@@ -42,8 +41,6 @@ public final class NotExValidatorUtil {
             return Result.of(false, Notification.of(validationError))
                     .resolve(en -> onEachError(consumer, en));
         }
-
-
 
 
     }
