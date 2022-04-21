@@ -8,6 +8,9 @@ import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 
 import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public final class NotExValidatorUtil {
     private final static ValidatorFactory FACTORY = Validation.buildDefaultValidatorFactory();
@@ -15,18 +18,29 @@ public final class NotExValidatorUtil {
 
     private NotExValidatorUtil() {}
 
-    public static <T> Result<Boolean, ValidationError<String, String>> validate(T object) {
+    private static Boolean onEachError(BiConsumer<String, String> consumer,
+                                       Notification<ValidationError<String, String>> errorNotification) {
+
+            errorNotification.getErrorObject()
+                    .ifPresent((errObj ->
+                            errObj.onEachError(consumer)));
+
+            return false;
+    }
+
+    public static <T> boolean validate(T object, BiConsumer<String, String> consumer) {
         Set<ConstraintViolation<T>> violationSet = VALIDATOR.validate(object);
 
         if (violationSet.isEmpty()) {
-            return Result.ok(true);
+            return true;
         } else {
             ValidationError<String, String> validationError = new ValidationError<>();
             violationSet.forEach(violation -> {
                 validationError.addError(violation.getPropertyPath().toString(), violation.getMessage());
             });
 
-            return Result.of(false, Notification.of(validationError));
+            return Result.of(false, Notification.of(validationError))
+                    .resolve(en -> onEachError(consumer, en));
         }
 
 
