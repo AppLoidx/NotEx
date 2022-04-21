@@ -48,10 +48,15 @@ public class VoidResult<S> {
     }
 
     public VoidResult<S> lookup(Solvable<S> lookup) {
-        // TODO: think about mutations
+        lookup(lookup, () -> {});
+        return this;
+    }
+
+    public VoidResult<S> lookup(Solvable<S> lookup, Runnable onNoError) {
+
         getNotification()
                 .flatMap(Notification::getErrorObject)
-                .ifPresent(lookup::solve);
+                .ifPresentOrElse(lookup::solve, onNoError);
         return this;
     }
 

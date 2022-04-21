@@ -123,6 +123,16 @@ public class Result<T, S> extends VoidResult<S> {
                 .orElseGet(() -> Result.ok(function.apply(this.object)));
     }
 
+    public Result<T, S> lookup(Solvable<S> lookup) {
+        lookup(lookup, () -> {});
+        return this;
+    }
+
+    public Result<T, S> lookup(Solvable<S> lookup, Runnable onNoError) {
+        super.lookup(lookup, onNoError);
+        return this;
+    }
+
     /**
      * Result factory method
      *
