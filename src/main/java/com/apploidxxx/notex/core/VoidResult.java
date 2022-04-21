@@ -47,6 +47,14 @@ public class VoidResult<S> {
         }
     }
 
+    public VoidResult<S> lookup(Solvable<S> lookup) {
+        // TODO: think about mutations
+        getNotification()
+                .flatMap(Notification::getErrorObject)
+                .ifPresent(lookup::solve);
+        return this;
+    }
+
     /**
      * @return optional notification
      */
