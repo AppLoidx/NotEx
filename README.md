@@ -20,12 +20,6 @@ Say "no" to exceptions
 </dependency>
 ```
 
-## Contribution ![](https://github.com/AppLoidx/NotEx/workflows/Java%20CI%20with%20Maven/badge.svg)
-Pull requests for improvements
-
-Full tech documentation is not available now. See Documentation and References chapters below
-  
-
 ## Basic example
 
 Basic idea of this library is to use notifications instead of throwing exceptions
