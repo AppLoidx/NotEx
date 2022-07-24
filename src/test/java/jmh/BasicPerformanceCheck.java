@@ -3,6 +3,10 @@ package jmh;
 import com.apploidxxx.notex.core.Notification;
 import com.apploidxxx.notex.core.Result;
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.runner.Runner;
+import org.openjdk.jmh.runner.RunnerException;
+import org.openjdk.jmh.runner.options.Options;
+import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -38,12 +42,17 @@ public class BasicPerformanceCheck {
     private Integer withException() {
         throw new ArithmeticException();
     }
+
     private Result<Integer, String> withNotEx() {
         return Result.err(Notification.of("Arithmetic error"));
     }
 
+    public static void main(String[] args) throws RunnerException {
+        Options opt = new OptionsBuilder()
+                .include(BasicPerformanceCheck.class.getSimpleName())
+                .forks(5)
+                .build();
 
-    public static void main(String[] args) throws IOException {
-        org.openjdk.jmh.Main.main(args);
+        new Runner(opt).run();
     }
 }

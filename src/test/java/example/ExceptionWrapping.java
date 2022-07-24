@@ -15,13 +15,13 @@ public class ExceptionWrapping {
         throw new ArithmeticException();
     }
 
-    Integer methodWithException(boolean isThrow) {
+Integer methodWithException(boolean isThrow) {
 
-        if (isThrow)
-            throw new ArithmeticException();
-        else
-            return RETURN_RESULT;
-    }
+    if (isThrow)
+        throw new ArithmeticException();
+    else
+        return RETURN_RESULT;
+}
 
 
     @Test

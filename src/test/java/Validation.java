@@ -46,6 +46,27 @@ public class Validation {
 
     }
 
+    private void validateException(final UserFields userFields) {
+        ValidationError<String, String> errorObject = new ValidationError<>();
+
+        if (userFields.age < 0) {
+            throw new IllegalArgumentException("Negative error");
+        }
+
+        if (userFields.year < 0) {
+            throw new IllegalArgumentException("Negative error");
+        }
+
+        if (userFields.month < 0) {
+            throw new IllegalArgumentException("Negative error");
+        }
+
+        if (userFields.day < 0) {
+            throw new IllegalArgumentException("Negative error");
+        }
+
+    }
+
 
     @Getter
     private static class UserFields {

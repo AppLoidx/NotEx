@@ -7,29 +7,29 @@ import org.junit.Test;
 
 public class ValidatorExample {
 
-    @Test
-    public void validatorExample() {
-        User user = new User(5, null);
+@Test
+public void validatorExample() {
+    User user = new User(5, null);
 
-        boolean isValid = NotExValidatorUtil.validate(user,
-                (field, msg) -> System.out.printf("Error in field %s : %s%n", field, msg));
+    boolean isValid = NotExValidatorUtil.validate(user,
+            (field, msg) -> System.out.printf("Error in field %s : %s%n", field, msg));
 
-        System.out.println("No errors : " + isValid);
+    System.out.println("No errors : " + isValid);
 
 
+}
+
+@Getter
+private static class User {
+    @Min(10)
+    private final int age;
+    @NotNull
+    private final String name;
+
+
+    public User(int age, String name) {
+        this.age = age;
+        this.name = name;
     }
-
-    @Getter
-    private static class User {
-        @Min(10)
-        private final int age;
-        @NotNull
-        private final String name;
-
-
-        public User(int age, String name) {
-            this.age = age;
-            this.name = name;
-        }
-    }
+}
 }

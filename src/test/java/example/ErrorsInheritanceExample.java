@@ -68,17 +68,17 @@ public class ErrorsInheritanceExample {
         assertEquals(expectedError, err);
     }
 
-    @Test
-    public void notExErrorHandling_2() {
-        final Integer expectedError = -2;
+@Test
+public void notExErrorHandling_2() {
+    final Integer expectedError = -2;
 
-        Integer err = someDoNotEx(ErrorType.SECOND)
-                .resolveFor(IllegalError.class, -1)
-                .resolveFor(ArithmeticError.class, -2)
-                .resolve(-3);
+    Integer err = someDoNotEx(ErrorType.SECOND)
+            .resolveFor(IllegalError.class, -1)
+            .resolveFor(ArithmeticError.class, -2)
+            .resolve(-3);
 
-        assertEquals(expectedError, err);
-    }
+    assertEquals(expectedError, err);
+}
 
 
 }

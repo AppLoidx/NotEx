@@ -14,14 +14,15 @@ public class BasicTest {
      */
     @Test
     public void basicResultUsage() {
-        Boolean value = Result.<String, String>ok("Hey1!!")
-            .resolveFrom(String::length)
-            .apply(this::assertOdd)
-            .apply(this::assertTrue)
-            .resolve(val -> val, errorObject -> {
-                errorObject.getErrorObject().ifPresent(log::info);
-                return false;
-            });
+Boolean value = Result.<String, String>ok("Hey1!!")
+    .resolveFrom(String::length)
+    .apply(this::assertOdd)
+    .lookup(log::error)
+    .apply(this::assertTrue)
+    .resolve(errorObject -> {
+        errorObject.getErrorObject().ifPresent(log::info);
+        return false;
+    });
 
         log.info(value.toString());
     }

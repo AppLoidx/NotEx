@@ -18,8 +18,8 @@ public class ResultLookup {
     }
 
     public VoidResult<String> checkWrapperWithLookup() {
-        return check1Exp()
-                .lookup(err -> log.error("Error lookup: " + err));
+return check1Exp()
+        .lookup(err -> log.error("Error lookup: " + err));
     }
 
     @Test

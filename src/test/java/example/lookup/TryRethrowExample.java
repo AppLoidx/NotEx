@@ -15,12 +15,12 @@ public class TryRethrowExample {
     }
 
     public void checkWrapperWithLookup() {
-        try {
-            check1Exp();
-        } catch (RuntimeException re) {
-            log.error("Error lookup: " + re.getMessage());
-            throw re;   // re-throwing the error
-        }
+try {
+    check1Exp();
+} catch (RuntimeException re) {
+    log.error("Error lookup: " + re.getMessage());
+    throw re;   // re-throwing the error
+}
     }
 
     @Test
