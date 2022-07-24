@@ -22,13 +22,21 @@ public class VoidResult<S> {
         return getNotification().isEmpty();
     }
 
+    public <R> R resolve(R onSuccess, R onError, Runnable finalizer) {
+        return resolve(() -> onSuccess, () -> onError, finalizer);
+    }
+
     public <R> R resolve(R onSuccess, R onError) {
-        return resolve(() -> onSuccess, () -> onError);
+        return resolve(() -> onSuccess, () -> onError, () -> {});
     }
 
 
-    public <R> R resolve(Supplier<R> onSuccess, Supplier<R> onError) {
-        return isOk() ? onSuccess.get() : onError.get();
+    public <R> R resolve(Supplier<R> onSuccess, Supplier<R> onError, Runnable finalizer) {
+        try {
+            return isOk() ? onSuccess.get() : onError.get();
+        } finally {
+            finalizer.run();
+        }
     }
 
     public void solve(Solvable<S> solvable) {
