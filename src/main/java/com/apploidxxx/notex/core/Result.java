@@ -86,6 +86,10 @@ public class Result<T, S> extends VoidResult<S> {
         return resolve(Function.identity(), resolvable);
     }
 
+    public T resolve(Resolvable<Notification<S>, T> resolvable, Runnable runnable) {
+        return resolve(Function.identity(), resolvable, runnable);
+    }
+
     public Result<T, S> resolveFor(Class<? extends S> clazz, T onError) {
         return resolveFor(clazz, (err) -> onError, () -> {
         });

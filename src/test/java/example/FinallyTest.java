@@ -1,17 +1,13 @@
+package example;
+
+
 import com.apploidxxx.notex.core.Notification;
 import com.apploidxxx.notex.core.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
-/**
- * Basic usage of NotEx library
- */
 @Slf4j
-public class BasicTest {
-
-    /**
-     * Example test
-     */
+public class FinallyTest {
     @Test
     public void basicResultUsage() {
         Boolean value = Result.<String, String>ok("Hey1!!")
@@ -22,7 +18,7 @@ public class BasicTest {
                 .resolve(errorObject -> {
                     errorObject.getErrorObject().ifPresent(log::info);
                     return false;
-                });
+                }, () -> log.info("Finally"));
 
         log.info(value.toString());
     }
@@ -43,5 +39,4 @@ public class BasicTest {
 
         }
     }
-
 }
