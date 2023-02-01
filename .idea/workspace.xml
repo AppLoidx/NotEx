@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd3a5b4d-cf11-459e-a8e5-34e612e2842b" name="Default Changelist" comment="add finalizer">
-      <change afterPath="$PROJECT_DIR$/markdown-docs/ru/short-examples.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/example/FinallyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/compare/basic/BasicException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/compare/basic/BasicNotex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/compare/nested/NestedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/compare/nested/NestedNotex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/compare/rethrow/LookupNotex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/compare/rethrow/RethrowException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/core/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apploidxxx/notex/core/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/java/NotEx",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ruby.rails.projectView.checked": "true",
     "vue.rearranger.settings.migration": "true"
@@ -281,6 +289,7 @@
       <workItem from="1658734246180" duration="5000" />
       <workItem from="1659561822522" duration="15000" />
       <workItem from="1664746339050" duration="511000" />
+      <workItem from="1675262356676" duration="1800000" />
     </task>
     <task id="LOCAL-00037" summary="add workspace xml">
       <created>1645194496953</created>
